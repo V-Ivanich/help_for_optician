@@ -1,8 +1,25 @@
-# React + Vite
+# Помощник для оптика.
+Для облегчения и удобства работы были собраны самые востребованные формулы.
+Подобный проект уже пытался реализовывать, но здесь
+применяются новые технологии, добавлены новые функции,
+новый дизайн.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Технологии
+- [HTML]
+- [CSS]
+- [JavaScript]
+- [React]
+- [Vite]
 
-Currently, two official plugins are available:
+## Использование
+Что бы инициализировать проект и установить зависимости
+в консоле ввести ```npm install```
+Запуск проекта через команду ```npm run dev```
+Чтобы открыть проект в браузере надо с зажатым ```Ctrl```,
+кликнуть по ссылке на локальный хост ```http://localhost:5173/```,
+проект откроется в браузере по умалчиванию.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Зачем этот проект?
+Использование данного проекта в реальной работе.
+Облегчение и ускорение расчетов
+Наращивание опыта, подогревание и поддержание интереса к программированию :)
