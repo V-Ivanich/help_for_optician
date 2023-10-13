@@ -1,0 +1,8 @@
+.wrapper__slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-image: url('../../img/bg_match_opacity.png');
+}

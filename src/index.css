@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --primary-bg__color: #bed7e2;
+  --top-line__color: #a5bac4;
+  --bg-light: #e0e0e0;
+  --bg-dark: #cedce1;
+  --logo__color: #7893a0;
+  --primary__color: #456d80;
+  --secondary__color: #7893a0;
+  --color-white: #fff;
+  --shadow-card: #324d67;
+  --border-card: #4d829a67;
+  --placeholder-color: #8f9597a8;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

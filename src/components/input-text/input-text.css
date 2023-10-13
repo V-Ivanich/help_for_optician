@@ -1,0 +1,31 @@
+.number-input {
+  margin: 0;
+  padding: 0.2rem 1rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--bg-light);
+  font-size: 1.6rem;
+  color: var(--primary__color);
+}
+
+.number-input:focus {
+  outline: 0;
+  appearance: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--logo__color);
+}
+
+.number-input::placeholder {
+  color: var(--placeholder-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}

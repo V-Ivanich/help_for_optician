@@ -1,0 +1,48 @@
+.container-menu {
+  max-width: 1024px;
+  margin: 0.3rem auto 0;
+  padding: 0 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--primary-bg__color);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: var(--primary__color);
+}
+
+.links-formul {
+  position: relative;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.links-formul:hover,
+.links-formul:focus {
+  color: var(--color-white);
+}
+
+.links-formul::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary__color);
+  content: '';
+  transition: width 0.3s ease-out;
+}
+
+.links-formul:hover::after,
+.links-formul:focus::after {
+  width: 100%;
+
+
+}
