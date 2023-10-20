@@ -1,5 +1,7 @@
-export const BaseFormuls = [
+export const temlateCards = [
   {
+    id: '0',
+    menuTitle: 'Фаска',
     title: 'Фаска с припуском',
     checks: ' -Фаска под 45\u00b0',
     inputs: [
@@ -10,6 +12,8 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '1',
+    menuTitle: 'Плоская фаска',
     title: 'Плоская фаска',
     inputs: [
       '\u00d8 детали (мм.)',
@@ -21,6 +25,8 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '2',
+    menuTitle: 'Цвет',
     title: 'Пересчет цвета',
     inputs: [
       '\u00d8 детали (мм.)',
@@ -30,11 +36,15 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '3',
+    menuTitle: 'Стрелка прогиба',
     title: 'Стрелка прогиба',
     checks: ' -Разница R1 и R2',
     inputs: ['\u00d8 сегмента (мм.)', 'R1 радиус (мм.)', 'R2 радиус (мм.)'],
   },
   {
+    id: '4',
+    menuTitle: 'Клин',
     title: 'Клин',
     checks: ' -Из угловых в мм.',
     inputs: [
@@ -47,6 +57,8 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '5',
+    menuTitle: 'Мертвый цвет',
     title: 'Мертвый цвет',
     inputs: [
       'Угол (\u00b0)',
@@ -56,6 +68,8 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '6',
+    menuTitle: 'Треугольники',
     title: 'Формулы треугольников',
     inputs: [
       'Сторона A',
@@ -68,6 +82,8 @@ export const BaseFormuls = [
     ],
   },
   {
+    id: '7',
+    menuTitle: 'Радианы/градусы',
     title: 'Радианы/градусы',
     inputs: [
       'Градусы (\u00b0)',

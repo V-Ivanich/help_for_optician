@@ -1,42 +1,118 @@
+import { useSelector, useDispatch } from 'react-redux'
+import { useState, useEffect } from 'react'
+import { desactiveCard, activeCard } from '../../store/cardSlice'
 import './nav-menu.css'
-import { Formul } from '../../utils'
+// import { Formul } from '../../utils'
 
 const NavMenu = () => {
-  const { Bevel } = Formul
+  const dataCards = useSelector((state) => state.cards.card)
+  const activeData = useSelector((state) => state.cards.activeCard)
+  const [countCards, setCountCard] = useState(0)
+  const dispatch = useDispatch()
 
-  const handleToggleCard = (event) => {
-    console.log(event.target)
-    console.log(Bevel(100, 50, 3))
+  // const { Bevel } = Formul
+
+  const handleToggleCard = ({ target }) => {
+    if (activeData.length > 0 && activeData.length <= 3) {
+      const presence = activeData.find((item) => item.id === target.id)
+      if (presence !== undefined) {
+        const position = activeData.indexOf(presence)
+        const id = presence.id
+        setCountCard(countCards - 1)
+        // AnimationRevomeCard(position)
+        setTimeout(() => {
+          dispatch(desactiveCard({ id }))
+        }, 1000)
+        return
+      }
+    }
+    if (activeData.length < 3) {
+      const findCard = dataCards.find((item) => item.id === target.id)
+      dispatch(activeCard(findCard))
+    }
   }
+
+  useEffect(() => {
+    if (countCards < activeData.length) {
+      setCountCard(countCards + 1)
+      AnimationAddCard()
+    } else {
+      console.log(countCards)
+      // setCountCard(countCards - 1)
+      return
+      // AnimationRevomeCard()
+    }
+  }, [activeData.length])
+
+  const AnimationAddCard = () => {
+    const nodeCard = document.querySelectorAll('.cardWrapper')
+    switch (nodeCard.length) {
+      case 1:
+        nodeCard[0].classList.add('add-card_1')
+        break
+      case 2:
+        nodeCard[0].classList.remove('add-card_1')
+        nodeCard[0].classList.add('add-card_2_1')
+
+        nodeCard[1].classList.add('add-card_2_2')
+        break
+      case 3:
+        nodeCard[0].classList.remove('add-card_2_1')
+        nodeCard[0].classList.add('add-card_3_1')
+
+        nodeCard[1].classList.remove('add-card_2_2')
+        nodeCard[1].classList.add('add-card_3_2')
+
+        nodeCard[2].classList.add('add-card_3_3')
+        break
+    }
+  }
+
+  // function AnimationRevomeCard(position) {
+  //   const nodeCard = document.querySelectorAll('.card')
+  //   switch (countCards) {
+  //     case 1:
+  //       nodeCard[0].removeAttribute('class')
+  //       nodeCard[0].classList.add('card')
+  //       nodeCard[0].classList.add('remove-card_1')
+  //       break
+  //     case 2:
+  //       nodeCard[0].removeAttribute('class')
+  //       nodeCard[0].classList.add('card')
+  //       nodeCard[0].classList.add('remove-card_2_1')
+
+  //       nodeCard[1].removeAttribute('class')
+  //       nodeCard[1].classList.add('card')
+  //       nodeCard[1].classList.add('remove-card_2_2')
+  //       break
+  //     case 3:
+  //       nodeCard[0].removeAttribute('class')
+  //       nodeCard[0].classList.add('card')
+  //       nodeCard[0].classList.add('remove-card_3_1')
+
+  //       nodeCard[1].removeAttribute('class')
+  //       nodeCard[1].classList.add('card')
+  //       nodeCard[1].classList.add('remove-card_3_2')
+
+  //       nodeCard[2].removeAttribute('class')
+  //       nodeCard[2].classList.add('card')
+  //       nodeCard[2].classList.add('remove-card_3_3')
+  //       break
+  //   }
+  // }
+
   return (
-    <div>
-      <div className='container-menu'>
-        <div className='nav-menu'>
-          <button className='links-formul' id='0' onClick={handleToggleCard}>
-            Фаска
+    <div className='container-menu'>
+      <div className='nav-menu'>
+        {dataCards.map((card, index) => (
+          <button
+            className='links-formul'
+            key={index}
+            id={index}
+            onClick={handleToggleCard}>
+            {card.menuTitle}
           </button>
-          <button className='links-formul' id='1' onClick={handleToggleCard}>
-            Плоская фаска
-          </button>
-          <button className='links-formul' id='2' onClick={handleToggleCard}>
-            Цвет
-          </button>
-          <button className='links-formul' id='3' onClick={handleToggleCard}>
-            Стрелка прогиба
-          </button>
-          <button className='links-formul' id='4' onClick={handleToggleCard}>
-            Клин
-          </button>
-          <button className='links-formul' id='5' onClick={handleToggleCard}>
-            Мертвый цвет
-          </button>
-          <button className='links-formul' id='6' onClick={handleToggleCard}>
-            Треугольники
-          </button>
-          <button className='links-formul' id='7' onClick={handleToggleCard}>
-            Радианы/градусы
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   )

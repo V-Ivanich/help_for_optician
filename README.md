@@ -9,6 +9,7 @@
 - [CSS]
 - [JavaScript]
 - [React]
+- [Redux-Toolkit]
 - [Vite]
 
 ## Использование

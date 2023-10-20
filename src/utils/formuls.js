@@ -14,3 +14,15 @@ export const Wedge = () => {}
 export const DeadColor = () => {}
 export const Triangles = () => {}
 export const RadiansDegrees = () => {}
+
+//массив заголовков формул
+export const ArrayFormuls = [
+  'Bevel',
+  'FlatBevel',
+  'Colors',
+  'DeflectionArrow',
+  'Wedge',
+  'DeadColor',
+  'Triangles',
+  'RadiansDegrees',
+]

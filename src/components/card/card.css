@@ -1,4 +1,7 @@
 .cardWrapper {
+  position: absolute;
+  top: 0;
+  left: 1024px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +14,7 @@
   font-family: 'Roboto', sans-serif;
   color: var(--primary__color);
   box-shadow: var(--shadow-card) 3px 4px 10px;
-  transition: transform 0.5s ease-in-out;
+  flex-shrink: 0;
 }
 
 .card__title {
@@ -37,6 +40,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* flex-grow: 1; */
   gap: 0.5rem;
 }
 
