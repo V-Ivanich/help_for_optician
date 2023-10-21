@@ -19,7 +19,7 @@ const NavMenu = () => {
         const position = activeData.indexOf(presence)
         const id = presence.id
         setCountCard(countCards - 1)
-        // AnimationRevomeCard(position)
+        AnimationRevomeCard(position)
         setTimeout(() => {
           dispatch(desactiveCard({ id }))
         }, 1000)
@@ -48,19 +48,26 @@ const NavMenu = () => {
     const nodeCard = document.querySelectorAll('.cardWrapper')
     switch (nodeCard.length) {
       case 1:
+        nodeCard[0].removeAttribute('class')
+        nodeCard[0].classList.add('cardWrapper')
         nodeCard[0].classList.add('add-card_1')
         break
       case 2:
-        nodeCard[0].classList.remove('add-card_1')
+        nodeCard[0].removeAttribute('class')
+        nodeCard[0].classList.add('cardWrapper')
         nodeCard[0].classList.add('add-card_2_1')
 
+        nodeCard[1].removeAttribute('class')
+        nodeCard[1].classList.add('cardWrapper')
         nodeCard[1].classList.add('add-card_2_2')
         break
       case 3:
-        nodeCard[0].classList.remove('add-card_2_1')
+        nodeCard[0].removeAttribute('class')
+        nodeCard[0].classList.add('cardWrapper')
         nodeCard[0].classList.add('add-card_3_1')
 
-        nodeCard[1].classList.remove('add-card_2_2')
+        nodeCard[1].removeAttribute('class')
+        nodeCard[1].classList.add('cardWrapper')
         nodeCard[1].classList.add('add-card_3_2')
 
         nodeCard[2].classList.add('add-card_3_3')
@@ -68,38 +75,100 @@ const NavMenu = () => {
     }
   }
 
-  // function AnimationRevomeCard(position) {
-  //   const nodeCard = document.querySelectorAll('.card')
-  //   switch (countCards) {
-  //     case 1:
-  //       nodeCard[0].removeAttribute('class')
-  //       nodeCard[0].classList.add('card')
-  //       nodeCard[0].classList.add('remove-card_1')
-  //       break
-  //     case 2:
-  //       nodeCard[0].removeAttribute('class')
-  //       nodeCard[0].classList.add('card')
-  //       nodeCard[0].classList.add('remove-card_2_1')
+  function AnimationRevomeCard(position) {
+    const nodeCard = document.querySelectorAll('.cardWrapper')
+    switch (countCards) {
+      case 1:
+        nodeCard[0].removeAttribute('class')
+        nodeCard[0].classList.add('cardWrapper')
+        nodeCard[0].classList.add('remove-card_1')
+        break
+      case 2:
+        if (position === 0) {
+          nodeCard[0].removeAttribute('class')
+          nodeCard[0].classList.add('cardWrapper')
+          nodeCard[0].classList.add('remove-revers-card_2_1')
 
-  //       nodeCard[1].removeAttribute('class')
-  //       nodeCard[1].classList.add('card')
-  //       nodeCard[1].classList.add('remove-card_2_2')
-  //       break
-  //     case 3:
-  //       nodeCard[0].removeAttribute('class')
-  //       nodeCard[0].classList.add('card')
-  //       nodeCard[0].classList.add('remove-card_3_1')
+          nodeCard[1].removeAttribute('class')
+          nodeCard[1].classList.add('cardWrapper')
+          nodeCard[1].classList.add('remove-revers-card_2_2')
 
-  //       nodeCard[1].removeAttribute('class')
-  //       nodeCard[1].classList.add('card')
-  //       nodeCard[1].classList.add('remove-card_3_2')
+          setTimeout(() => {
+            nodeCard[0].removeAttribute('class')
+            nodeCard[0].classList.add('cardWrapper')
+            nodeCard[0].classList.add('static-card-1')
+          }, 820)
+          break
+        } else {
+          nodeCard[0].removeAttribute('class')
+          nodeCard[0].classList.add('cardWrapper')
+          nodeCard[0].classList.add('remove-card_2_1')
 
-  //       nodeCard[2].removeAttribute('class')
-  //       nodeCard[2].classList.add('card')
-  //       nodeCard[2].classList.add('remove-card_3_3')
-  //       break
-  //   }
-  // }
+          nodeCard[1].removeAttribute('class')
+          nodeCard[1].classList.add('cardWrapper')
+          nodeCard[1].classList.add('remove-card_2_2')
+          break
+        }
+      case 3:
+        if (position === 0) {
+          nodeCard[0].removeAttribute('class')
+          nodeCard[0].classList.add('cardWrapper')
+          nodeCard[0].classList.add('remove-revers-card_3_1')
+
+          nodeCard[1].removeAttribute('class')
+          nodeCard[1].classList.add('cardWrapper')
+          nodeCard[1].classList.add('add-card_2_1')
+
+          nodeCard[2].removeAttribute('class')
+          nodeCard[2].classList.add('cardWrapper')
+          nodeCard[2].classList.add('remove-revers-card_3_2')
+
+          setTimeout(() => {
+            nodeCard[0].removeAttribute('class')
+            nodeCard[0].classList.add('cardWrapper')
+            nodeCard[0].classList.add('static-card-3-1')
+
+            nodeCard[1].removeAttribute('class')
+            nodeCard[1].classList.add('cardWrapper')
+            nodeCard[1].classList.add('static-card-3-2')
+          }, 830)
+          break
+        }
+        if (position === 1) {
+          nodeCard[0].removeAttribute('class')
+          nodeCard[0].classList.add('cardWrapper')
+          nodeCard[0].classList.add('remove-card_3_1')
+
+          nodeCard[1].removeAttribute('class')
+          nodeCard[1].classList.add('cardWrapper')
+          nodeCard[1].classList.add('remove-revers-card_3_3')
+
+          nodeCard[2].removeAttribute('class')
+          nodeCard[2].classList.add('cardWrapper')
+          nodeCard[2].classList.add('remove-revers-card_3_2')
+
+          setTimeout(() => {
+            nodeCard[1].removeAttribute('class')
+            nodeCard[1].classList.add('cardWrapper')
+            nodeCard[1].classList.add('static-card-3-2')
+          }, 800)
+          break
+        } else {
+          nodeCard[0].removeAttribute('class')
+          nodeCard[0].classList.add('cardWrapper')
+          nodeCard[0].classList.add('remove-card_3_1')
+
+          nodeCard[1].removeAttribute('class')
+          nodeCard[1].classList.add('cardWrapper')
+          nodeCard[1].classList.add('remove-card_3_2')
+
+          nodeCard[2].removeAttribute('class')
+          nodeCard[2].classList.add('cardWrapper')
+          nodeCard[2].classList.add('remove-card_3_3')
+          break
+        }
+    }
+  }
 
   return (
     <div className='container-menu'>

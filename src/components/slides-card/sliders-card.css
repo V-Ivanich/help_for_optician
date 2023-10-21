@@ -51,13 +51,13 @@
 
 .remove-card_3_1 {
   animation: right-thre-card;
-  animation-duration: 1s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
 }
 
 .add-card_3_2 {
   animation: left-thre-card-1;
-  animation-duration: 1s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
 }
 
@@ -79,18 +79,61 @@
   animation-fill-mode: forwards;
 }
 
+.remove-revers-card_2_1 {
+  animation: revers-two-card-1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.remove-revers-card_2_2 {
+  animation: revers-two-card-2;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.remove-revers-card_3_1 {
+  animation: revers-thre-card-1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.remove-revers-card_3_2 {
+  animation: revers-thre-card-2;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.remove-revers-card_3_3 {
+  animation: revers-thre-card-3;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.static-card-1 {
+  animation: reverse-static-1;
+  animation-delay: .1s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+}
+
+.static-card-3-1 {
+  animation: reverse-static-3-1;
+  animation-delay: .1s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+}
+
+.static-card-3-2 {
+  animation: reverse-static-3-2;
+  animation-delay: .1s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes left-one-card {
   0% {
     left: 1024px;
     opacity: 0.2;
-  }
-
-  25% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.6;
   }
 
   100% {
@@ -115,25 +158,45 @@
     opacity: 0.2;
   }
 
-  50% {
-    opacity: 0.5;
-  }
-
   100% {
     left: 522px;
     opacity: 1;
   }
 }
 
+@keyframes revers-two-card-1 {
+  0% {
+    left: 200px;
+    top: 0;
+  }
+
+  35% {
+    top: 180px;
+  }
+
+  100% {
+    left: 1024px;
+    top: 0;
+  }
+}
+
+@keyframes revers-two-card-2 {
+  0% {
+    left: 522px;
+  }
+
+  100% {
+    left: 362px;
+  }
+}
+
 @keyframes left-thre-card {
   0% {
     left: 200px;
-
   }
 
   100% {
     left: 41px;
-
   }
 }
 
@@ -153,10 +216,6 @@
     opacity: 0.2;
   }
 
-  50% {
-    opacity: 0.5;
-  }
-
   100% {
     left: 683px;
     opacity: 1;
@@ -165,7 +224,7 @@
 
 @keyframes right-one-card {
   0% {
-    left: 210px;
+    left: 362px;
     top: 0px;
   }
 
@@ -174,24 +233,24 @@
   }
 
   100% {
-    left: 650px;
+    left: 1024px;
     top: 0px;
   }
 }
 
 @keyframes right-two-card-1 {
   0% {
-    left: 105px;
+    left: 200px;
   }
 
   100% {
-    left: 210px;
+    left: 362px;
   }
 }
 
 @keyframes right-two-card-2 {
   0% {
-    left: 320px;
+    left: 522px;
     top: 0px;
   }
 
@@ -200,34 +259,34 @@
   }
 
   100% {
-    left: 650px;
+    left: 1024px;
     top: 0px;
   }
 }
 
 @keyframes right-thre-card {
   0% {
-    left: 0px;
+    left: 41px;
   }
 
   100% {
-    left: 105px;
+    left: 200px;
   }
 }
 
 @keyframes right-thre-card-1 {
   0% {
-    left: 210px;
+    left: 363px;
   }
 
   100% {
-    left: 320px;
+    left: 522px;
   }
 }
 
 @keyframes right-thre-card-2 {
   0% {
-    left: 420px;
+    left: 683px;
     top: 0px;
   }
 
@@ -236,7 +295,82 @@
   }
 
   100% {
-    left: 650px;
+    left: 1024px;
     top: 0px;
+  }
+}
+
+@keyframes revers-thre-card-1 {
+  0% {
+    left: 41px;
+    top: 0px;
+  }
+
+  35% {
+    top: 180px;
+  }
+
+  100% {
+    left: 1024px;
+    top: 0px;
+  }
+}
+
+@keyframes revers-thre-card-2 {
+  0% {
+    left: 683px;
+  }
+
+  100% {
+    left: 522px;
+  }
+}
+
+@keyframes revers-thre-card-3 {
+  0% {
+    left: 362px;
+  }
+
+  35% {
+    top: 180px;
+  }
+
+  100% {
+    left: 1024px;
+  }
+}
+
+@keyframes reverse-static-1 {
+  0% {
+    left: 362px;
+  }
+
+  100% {
+    left: 362px;
+  }
+}
+
+@keyframes reverse-static-3-1 {
+  0% {
+    left: 200px;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  100% {
+    left: 200px;
+    opacity: 1;
+  }
+}
+
+@keyframes reverse-static-3-2 {
+  0% {
+    left: 522px;
+    opacity: 0.5;
+  }
+
+  100% {
+    left: 522px;
+    opacity: 1;
   }
 }
