@@ -1,6 +1,7 @@
 export const temlateCards = [
   {
     id: '0',
+    name: 'faska',
     menuTitle: 'Фаска',
     title: 'Фаска с припуском',
     checks: ' -Фаска под 45\u00b0',
@@ -13,6 +14,7 @@ export const temlateCards = [
   },
   {
     id: '1',
+    name: 'pl_faska',
     menuTitle: 'Плоская фаска',
     title: 'Плоская фаска',
     inputs: [
@@ -26,6 +28,7 @@ export const temlateCards = [
   },
   {
     id: '2',
+    name: 'cvet',
     menuTitle: 'Цвет',
     title: 'Пересчет цвета',
     inputs: [
@@ -37,6 +40,7 @@ export const temlateCards = [
   },
   {
     id: '3',
+    name: 'strelka',
     menuTitle: 'Стрелка прогиба',
     title: 'Стрелка прогиба',
     checks: ' -Разница R1 и R2',
@@ -44,6 +48,7 @@ export const temlateCards = [
   },
   {
     id: '4',
+    name: 'klin',
     menuTitle: 'Клин',
     title: 'Клин',
     checks: ' -Из угловых в мм.',
@@ -58,6 +63,7 @@ export const temlateCards = [
   },
   {
     id: '5',
+    name: 'dead_cvet',
     menuTitle: 'Мертвый цвет',
     title: 'Мертвый цвет',
     inputs: [
@@ -69,6 +75,7 @@ export const temlateCards = [
   },
   {
     id: '6',
+    name: 'treygolnik',
     menuTitle: 'Треугольники',
     title: 'Формулы треугольников',
     inputs: [
@@ -83,6 +90,7 @@ export const temlateCards = [
   },
   {
     id: '7',
+    name: 'grad_rad',
     menuTitle: 'Радианы/градусы',
     title: 'Радианы/градусы',
     inputs: [

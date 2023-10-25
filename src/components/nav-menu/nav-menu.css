@@ -14,6 +14,7 @@
 }
 
 .links-formul {
+  cursor: pointer;
   position: relative;
   line-height: 1;
   border: none;
@@ -23,9 +24,25 @@
   color: inherit;
 }
 
-.links-formul:hover,
-.links-formul:focus {
+.links-formul:disabled {
+  color: #d2bfbf;
+  cursor: auto;
+}
+
+.links-formul:disabled:hover::after {
+  width: 0;
+}
+
+.links-formul:disabled:hover {
+  color: #fb8b8b;
+}
+
+.links-formul:hover {
   color: var(--color-white);
+}
+
+.links-formul:active {
+  color: coral;
 }
 
 .links-formul::after {
@@ -40,9 +57,21 @@
   transition: width 0.3s ease-out;
 }
 
-.links-formul:hover::after,
-.links-formul:focus::after {
+.links-formul:hover::after {
   width: 100%;
-
-
 }
+
+.push-button {
+  color: var(--color-white);
+}
+
+/* .push-button::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-white);
+  content: '';
+} */

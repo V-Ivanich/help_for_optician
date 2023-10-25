@@ -14,6 +14,8 @@ import { DeadColor } from './formuls'
 import { Triangles } from './formuls'
 // Перевод радиан / градусы
 import { RadiansDegrees } from './formuls'
+// Состояние кнопок меню
+import { StatusButtons } from './statusButtons'
 
 export const Formul = {
   Bevel,
@@ -24,4 +26,5 @@ export const Formul = {
   DeadColor,
   Triangles,
   RadiansDegrees,
+  StatusButtons,
 }
