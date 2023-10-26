@@ -1,0 +1,113 @@
+.static-center {
+  left: 362px;
+}
+
+.static-left {
+  left: 200px;
+}
+
+.static-right {
+  left: 522px;
+}
+
+.add-card_1 {
+  animation: left-one-card;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-card_2_1 {
+  animation: left-two-card-1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-card_2_2 {
+  animation: left-two-card-2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-card_3_1 {
+  animation: left-thre-card;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-card_3_2 {
+  animation: left-thre-card-1;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.add-card_3_3 {
+  animation: left-thre-card-2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-one-card {
+  0% {
+    left: 1024px;
+    opacity: 0.2;
+  }
+
+  100% {
+    left: 362px;
+    opacity: 1;
+  }
+}
+
+@keyframes left-two-card-1 {
+  0% {
+    left: 362px;
+  }
+
+  100% {
+    left: 200px;
+  }
+}
+
+@keyframes left-two-card-2 {
+  0% {
+    left: 1024px;
+    opacity: 0.2;
+  }
+
+  100% {
+    left: 522px;
+    opacity: 1;
+  }
+}
+
+@keyframes left-thre-card {
+  0% {
+    left: 200px;
+  }
+
+  100% {
+    left: 41px;
+  }
+}
+
+@keyframes left-thre-card-1 {
+  0% {
+    left: 522px;
+  }
+
+  100% {
+    left: 362px;
+  }
+}
+
+@keyframes left-thre-card-2 {
+  0% {
+    left: 1024px;
+    opacity: 0.2;
+  }
+
+  100% {
+    left: 683px;
+    opacity: 1;
+  }
+}

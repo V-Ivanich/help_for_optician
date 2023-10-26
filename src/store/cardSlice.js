@@ -15,6 +15,7 @@ const cardSlice = createSlice({
       state.activeCard.push(action.payload)
     },
     desactiveCard(state, action) {
+      console.log(action.payload.id)
       state.activeCard = state.activeCard.filter(
         (card) => card.id !== action.payload.id,
       )

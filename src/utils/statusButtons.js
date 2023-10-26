@@ -1,7 +1,4 @@
-// import { useState } from 'react'
-
 export const StatusButtons = (target) => {
-  // const [activeButton, setActiveButton] = useState(0)
   const dataAllMenuButtons = document.querySelectorAll('.links-formul')
 
   dataAllMenuButtons.forEach((item) => {
