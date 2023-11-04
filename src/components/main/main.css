@@ -5,3 +5,91 @@
   padding: 1rem;
   border-radius: 1rem;
 }
+
+.move-left-1 {
+  animation-name: left-1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.move-left-2-1 {
+  animation-name: left-2-1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.move-left-2-2 {
+  animation-name: left-2-2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.move-left-3-1 {}
+
+.move-left-3-2 {}
+
+.move-left-3-3 {}
+
+.delete-right-1 {}
+
+.after-removal-2 {}
+
+.after-removal-3 {}
+
+.delete-right-2 {}
+
+.after-removal-1 {}
+
+.delete-right-3 {}
+
+.after-removal-2-3 {}
+
+@keyframes left-1 {
+  0% {
+    left: 1030px;
+  }
+
+  100% {
+    left: 358px;
+  }
+}
+
+@keyframes left-2-1 {
+  0% {
+    left: 358px;
+  }
+
+  100% {
+    left: 217px;
+  }
+}
+
+@keyframes left-2-2 {
+  0% {
+    left: 1030px;
+  }
+
+  100% {
+    left: 507px;
+  }
+}
+
+@keyframes left-3-1 {}
+
+@keyframes left-3-2 {}
+
+@keyframes left-3-3 {}
+
+@keyframes delete-1 {}
+
+@keyframes after-delete-2 {}
+
+@keyframes after-delete-3 {}
+
+@keyframes delete-2 {}
+
+@keyframes after-delete-1 {}
+
+@keyframes delete-3 {}
+
+@keyframes after-delete-2-3 {}

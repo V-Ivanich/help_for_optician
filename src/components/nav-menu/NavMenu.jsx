@@ -1,73 +1,38 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { useState, useEffect } from 'react'
-import { desactiveCard, activeCard } from '../../store/cardSlice'
-import './nav-menu.css'
-import { Formul } from '../../utils'
-import AnimationAddCard from '../../animations/AnimationAddCards'
+import { activeCard, desactiveCard } from '../../store/cardSlice'
 
-const NavMenu = () => {
-  const { StatusButtons } = Formul
-  const dataCards = useSelector((state) => state.cards.card)
-  const activeData = useSelector((state) => state.cards.activeCard)
-  const [countCards, setCountCard] = useState(0)
+import { Formul } from '../../utils'
+import './nav-menu.css'
+
+export const NavMenu = () => {
+  const arrayCards = useSelector((state) => state.cards.card)
+  const activeCards = useSelector((state) => state.cards.activeCard)
+
   const dispatch = useDispatch()
 
-  const AddRemoveStore = (id) => {
-    const findActivCard = activeData.find((card) => card.id === id)
-    if (findActivCard === undefined) {
-      const findCard = dataCards.find((item) => item.id === id)
-      dispatch(activeCard(findCard))
-    } else {
-      dispatch(desactiveCard({ id }))
-    }
-  }
+  const { StatusButtons, CardsList } = Formul
 
   const handleToggleCard = ({ target }) => {
-    StatusButtons(target)
-    AddRemoveStore(target.id)
-    return
-  }
-  // const handleToggleCard = ({ target }) => {
-  //   if (activeData.length > 0 && activeData.length <= 3) {
-  //     const presence = activeData.find((item) => item.id === target.id)
-  //     if (presence !== undefined) {
-  //       const position = activeData.indexOf(presence)
-  //       console.log('position-start', position)
-  //       const id = presence.id
-  //       setCountCard(countCards - 1)
-  //       AnimationRevomeCard(position)
-  //       setTimeout(() => {
-  //         dispatch(desactiveCard({ id }))
-  //         // dispatch(restoreClassClear())
-  //       }, 1000)
-  //       return
-  //     }
-  //   }
-  //   if (activeData.length < 3) {
-  //     const findCard = dataCards.find((item) => item.id === target.id)
-  //     dispatch(activeCard(findCard))
-  //   }
-  // }
-
-  useEffect(() => {
-    if (countCards < activeData.length) {
-      console.log('добавдение карточки ', countCards)
-      AnimationAddCard(activeData)
-    } else if (countCards !== activeData.length) {
-      console.log('удаление карточки ', countCards)
-      AnimationRevomeCard(activeData, countCards)
+    const dataItem = StatusButtons(target)
+    if (dataItem) {
+      if (dataItem.activ === 'true') {
+        const findCard = arrayCards.find((card) => card.name === dataItem.id)
+        dispatch(activeCard(findCard))
+      } else {
+        dispatch(desactiveCard(dataItem.id))
+      }
     }
-    setCountCard(activeData.length)
-  }, [activeData.length])
+    CardsList(dataItem, activeCards)
+  }
 
   return (
     <div className='container-menu'>
       <div className='nav-menu'>
-        {dataCards.map((card, index) => (
+        {arrayCards.map((card, index) => (
           <button
             className='links-formul'
             key={index}
-            id={index}
+            id={card.name}
             value='false'
             onClick={handleToggleCard}>
             {card.menuTitle}
@@ -77,5 +42,3 @@ const NavMenu = () => {
     </div>
   )
 }
-
-export default NavMenu

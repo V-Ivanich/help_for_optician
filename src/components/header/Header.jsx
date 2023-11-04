@@ -1,5 +1,5 @@
 import HeaderTopPanel from '../header-top-panel/HeaderTopPanel'
-import NavMenu from '../nav-menu/NavMenu'
+import { NavMenu } from '../nav-menu/NavMenu'
 import Images from '../../img/man.svg'
 import './header.css'
 

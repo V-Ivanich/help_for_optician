@@ -1,12 +1,10 @@
 import Card from '../card/Card'
 import { useSelector } from 'react-redux'
 
-// import { Formul } from '../../utils'
-// import { ArrayFormuls } from '../../utils/formuls'
 import './sliders-card.css'
 
 const SlideCard = () => {
-  const data = useSelector((state) => state.cards.activeCard)
+  const data = useSelector((state) => state.cards.card)
 
   return (
     <div className='wrapper__slider'>

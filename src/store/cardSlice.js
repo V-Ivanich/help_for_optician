@@ -5,7 +5,6 @@ const cardSlice = createSlice({
   initialState: {
     card: [],
     activeCard: [],
-    restoreClass: [],
   },
   reducers: {
     addCard(state, action) {
@@ -15,16 +14,9 @@ const cardSlice = createSlice({
       state.activeCard.push(action.payload)
     },
     desactiveCard(state, action) {
-      console.log(action.payload.id)
       state.activeCard = state.activeCard.filter(
-        (card) => card.id !== action.payload.id,
+        (card) => card.name !== action.payload,
       )
-    },
-    restoreClassAdd(state, action) {
-      state.restoreClass.push(action.payload)
-    },
-    restoreClassClear(state) {
-      state.restoreClass = []
     },
   },
 })

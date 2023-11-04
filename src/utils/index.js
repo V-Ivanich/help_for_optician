@@ -16,6 +16,8 @@ import { Triangles } from './formuls'
 import { RadiansDegrees } from './formuls'
 // Состояние кнопок меню
 import { StatusButtons } from './statusButtons'
+// Поиск в коллекции елемента соответствующий кнопке
+import { CardsList } from './cardsList'
 
 export const Formul = {
   Bevel,
@@ -27,4 +29,5 @@ export const Formul = {
   Triangles,
   RadiansDegrees,
   StatusButtons,
+  CardsList,
 }

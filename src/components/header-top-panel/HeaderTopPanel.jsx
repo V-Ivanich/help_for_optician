@@ -11,7 +11,7 @@ const HeaderTopPanel = () => {
           <span>дополненная</span>
           <span>новые функции</span>
           <span>новый дизайн</span>
-          <span>бесплатна</span>
+          <span>почти даром</span>
           <span>единственная в своем роде</span>
         </div>
       </div>

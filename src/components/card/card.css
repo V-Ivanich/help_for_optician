@@ -1,19 +1,19 @@
 .cardWrapper {
   position: absolute;
-  top: 0;
-  left: 1024px;
   display: flex;
+  top: 10px;
+  left: 1030px;
+  width: 280px;
+  height: 400px;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-  width: 280px;
-  height: 400px;
-  background-image: linear-gradient(to top, var(--primary-bg__color), var(--bg-dark));
   border: 1px solid var(--border-card);
   border-radius: 10px;
+  box-shadow: var(--shadow-card) 3px 4px 10px;
+  background-image: linear-gradient(to top, var(--primary-bg__color), var(--bg-dark));
   font-family: 'Roboto', sans-serif;
   color: var(--primary__color);
-  box-shadow: var(--shadow-card) 3px 4px 10px;
   flex-shrink: 0;
 }
 

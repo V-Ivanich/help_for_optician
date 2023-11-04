@@ -19,4 +19,5 @@ export const StatusButtons = (target) => {
       item.disabled = false
     })
   }
+  return { id: target.id, activ: target.value }
 }

@@ -1,17 +1,8 @@
 import TextField from '../textField/TextField'
-import { useSelector } from 'react-redux'
 import './card.css'
 
 const Card = ({ cardAttribute, id, FormulItem }) => {
   const placeholders = cardAttribute.inputs
-  const restoreClasses = useSelector((state) => state.cards.restoreClass)
-
-  let dopClass = ''
-  if (restoreClasses.length) {
-    console.log(restoreClasses, id)
-    dopClass = restoreClasses.filter((item) => item.id === id)
-  }
-  console.log('dopclass-', dopClass.restorClass)
 
   const handleChangeCard = (e) => {
     const { value, name } = e.target
@@ -20,7 +11,6 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
 
   const handleChecked = (e) => {
     const { checked, name } = e.target
-    console.log(checked, name)
   }
 
   const handleSubmit = () => {
@@ -36,14 +26,11 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
         mass.push(item.value)
       }
     })
-    console.log(mass)
   }
 
   return (
     <>
-      <div
-        className={'cardWrapper' + ' ' + cardAttribute.name + ' ' + dopClass}
-        id={id}>
+      <div className='cardWrapper' name={cardAttribute.name}>
         <div className='card__title'>
           <h4 className='card__text'>{cardAttribute.title}</h4>
         </div>
