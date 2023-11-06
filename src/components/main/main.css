@@ -24,25 +24,77 @@
   animation-fill-mode: forwards;
 }
 
-.move-left-3-1 {}
+.move-left-3-1 {
+  animation-name: left-3-1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.move-left-3-2 {}
+.move-left-3-2 {
+  animation-name: left-3-2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.move-left-3-3 {}
+.move-left-3-3 {
+  animation-name: left-3-3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.delete-right-1 {}
+.delete-right-1of3 {
+  animation-name: delete-1of3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.after-removal-2 {}
+.after-removal-3of3 {
+  animation-name: after-delete-3of3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.after-removal-3 {}
+.delete-right-2of3 {
+  animation-name: delete-2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.delete-right-2 {}
+.after-removal-1of3 {
+  animation-name: after-delete-1of3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.after-removal-1 {}
+.delete-right-3 {
+  animation-name: delete-3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.delete-right-3 {}
+.after-removal-2of3 {
+  animation-name: after-delete-2of3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
-.after-removal-2-3 {}
+.delete-right-1of2 {
+  animation-name: delete-1of2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.after-removal-2of2 {
+  animation-name: delete-2of2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.delete-right-2of2 {
+  animation-name: after-delete-2of2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
 @keyframes left-1 {
   0% {
@@ -50,7 +102,7 @@
   }
 
   100% {
-    left: 358px;
+    left: 362px;
   }
 }
 
@@ -60,7 +112,7 @@
   }
 
   100% {
-    left: 217px;
+    left: 212px;
   }
 }
 
@@ -70,26 +122,156 @@
   }
 
   100% {
-    left: 507px;
+    left: 512px;
   }
 }
 
-@keyframes left-3-1 {}
+@keyframes left-3-1 {
+  0% {
+    left: 212px;
+  }
 
-@keyframes left-3-2 {}
+  100% {
+    left: 62px;
+  }
+}
 
-@keyframes left-3-3 {}
+@keyframes left-3-2 {
+  0% {
+    left: 512px;
+  }
 
-@keyframes delete-1 {}
+  100% {
+    left: 362px;
+  }
+}
 
-@keyframes after-delete-2 {}
+@keyframes left-3-3 {
+  0% {
+    left: 1030px;
+  }
 
-@keyframes after-delete-3 {}
+  100% {
+    left: 662px;
+  }
+}
 
-@keyframes delete-2 {}
+@keyframes delete-1of3 {
+  0% {
+    left: 62px;
+    top: 10px;
+  }
 
-@keyframes after-delete-1 {}
+  40% {
+    top: 200px;
+  }
 
-@keyframes delete-3 {}
+  100% {
+    left: 1030px;
+    top: 10px;
+  }
+}
 
-@keyframes after-delete-2-3 {}
+@keyframes after-delete-3of3 {
+  0% {
+    left: 662px;
+  }
+
+  100% {
+    left: 512px;
+  }
+}
+
+@keyframes delete-2 {
+  0% {
+    left: 362px;
+    top: 10px;
+  }
+
+  40% {
+    top: 200px;
+  }
+
+  100% {
+    left: 1030px;
+    top: 10px;
+  }
+}
+
+@keyframes after-delete-1of3 {
+  0% {
+    left: 62px;
+  }
+
+  100% {
+    left: 212px;
+  }
+}
+
+@keyframes delete-3 {
+  0% {
+    left: 662px;
+    top: 10px;
+  }
+
+  40% {
+    top: 200px;
+  }
+
+  100% {
+    left: 1030px;
+    top: 10px;
+  }
+}
+
+@keyframes after-delete-2of3 {
+  0% {
+    left: 362px;
+  }
+
+  100% {
+    left: 512px;
+  }
+}
+
+@keyframes delete-1of2 {
+  0% {
+    left: 212px;
+    top: 10px;
+  }
+
+  40% {
+    top: 200px;
+  }
+
+  100% {
+    left: 1030px;
+    top: 10px;
+  }
+}
+
+@keyframes delete-2of2 {
+  0% {
+    left: 512px;
+    top: 10px;
+  }
+
+  40% {
+    top: 200px;
+  }
+
+  100% {
+    left: 1030px;
+    top: 10px;
+  }
+}
+
+@keyframes after-delete-2of2 {
+  0% {
+    left: 212px;
+  }
+
+  100% {
+    left: 362px;
+  }
+}
