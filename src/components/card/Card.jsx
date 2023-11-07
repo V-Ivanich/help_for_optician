@@ -1,30 +1,47 @@
 import TextField from '../textField/TextField'
+import { Formul } from '../../utils'
 import './card.css'
 
 const Card = ({ cardAttribute, id, FormulItem }) => {
   const placeholders = cardAttribute.inputs
 
+  const { FiltersFormul } = Formul
+
   const handleChangeCard = (e) => {
     const { value, name } = e.target
-    console.log(value, name)
+    // console.log(value, name)
   }
 
   const handleChecked = (e) => {
     const { checked, name } = e.target
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = ({ target }) => {
     const idsSingle = '#card_body_' + String(id)
     const nodeLists = document
       .querySelector(idsSingle)
       .querySelectorAll('input')
-    const mass = []
+    const arrayDataCard = []
     nodeLists.forEach((item) => {
       if (item.type === 'checkbox') {
-        mass.push(item.checked)
+        arrayDataCard.push(item.checked)
       } else {
-        mass.push(item.value)
+        arrayDataCard.push(+item.value)
       }
+    })
+
+    const outResult = document
+      .querySelector('.card__result_' + cardAttribute.name)
+      .querySelector('label')
+    const tempResult = FiltersFormul(arrayDataCard, target.name)
+    outResult.innerText = 'Result:\u00A0\u00A0\u00A0' + tempResult.toFixed(3)
+  }
+
+  const handleClearDataCard = (id) => {
+    const nodeLists = document.querySelector(`#${id}`).querySelectorAll('input')
+    nodeLists.forEach((item) => {
+      if (item.type === 'checkbox') item.checked = false
+      else item.value = ''
     })
   }
 
@@ -56,14 +73,21 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
             />
           ))}
         </div>
-        <div className='card__result'>
-          <label>Result : </label>
+        <div className={'card__result_' + cardAttribute.name}>
+          <label className='result'>Result : </label>
         </div>
         <div className='card__actions'>
-          <button className='btn' name={'wrapper_' + id} onClick={handleSubmit}>
+          <button
+            className='btn'
+            name={cardAttribute.name}
+            onClick={handleSubmit}>
             Result
           </button>
-          <button className='btn btn-clear'>Reset</button>
+          <button
+            className='btn btn-clear'
+            onClick={() => handleClearDataCard('card_body_' + id)}>
+            Reset
+          </button>
         </div>
       </div>
     </>

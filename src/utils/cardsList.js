@@ -2,9 +2,7 @@ export const CardsList = (dataItem, parsingActiveCards) => {
   const list = document.getElementsByClassName('cardWrapper')
 
   const { id, activ, position } = dataItem
-  console.log(parsingActiveCards)
   const temporary = []
-  // const classInicial = 'cardWrapper'
 
   parsingActiveCards.forEach((item) => {
     for (let elem of list) {
@@ -19,8 +17,6 @@ export const CardsList = (dataItem, parsingActiveCards) => {
       if (item.attributes.name.nodeValue === id) return item
     }
   }
-
-  console.log(temporary, position, activ, id)
 
   if (activ === 'true') {
     switch (temporary.length) {

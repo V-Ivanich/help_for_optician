@@ -18,6 +18,8 @@ import { RadiansDegrees } from './formuls'
 import { StatusButtons } from './statusButtons'
 // Поиск в коллекции елемента соответствующий кнопке
 import { CardsList } from './cardsList'
+// Фильтрация/выбор формул для расчетов
+import FiltersFormul from './filtersFormul'
 
 export const Formul = {
   Bevel,
@@ -30,4 +32,5 @@ export const Formul = {
   RadiansDegrees,
   StatusButtons,
   CardsList,
+  FiltersFormul,
 }
