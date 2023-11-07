@@ -34,7 +34,7 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
       .querySelector('.card__result_' + cardAttribute.name)
       .querySelector('label')
     const tempResult = FiltersFormul(arrayDataCard, target.name)
-    outResult.innerText = 'Result:\u00A0\u00A0\u00A0' + tempResult.toFixed(3)
+    outResult.innerText = 'Result:\u00A0\u00A0\u00A0' + tempResult
   }
 
   const handleClearDataCard = (id) => {

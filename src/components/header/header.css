@@ -50,6 +50,7 @@
 }
 
 .info__image>img {
+  cursor: pointer;
   position: absolute;
   top: -3rem;
   left: 1rem;

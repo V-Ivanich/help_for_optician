@@ -12,6 +12,26 @@ export const FlatBevel = (arrayData) => {
     maxDiametrSeg,
     minDiametrSeg,
   ] = [...arrayData]
+
+  let result = null
+  let size = null
+
+  const topSizeDet = diametrDetel + maxDiametrDet
+  const bottomSizeDet = diametrDetel + minDiametrDet
+  const topSizeSeg = diametrSegment + maxDiametrSeg
+  const bottomSizeSeg = diametrSegment + minDiametrSeg
+
+  let midleDet = (topSizeDet - topSizeSeg) / 2
+  let midleSeg = (bottomSizeDet - bottomSizeSeg) / 2
+
+  if (midleDet > midleSeg) {
+    size = midleDet - midleSeg
+    result = midleSeg
+  } else {
+    size = midleSeg - midleDet
+    result = midleDet
+  }
+  return `${result.toFixed(2)}\u00A0+${size.toFixed(3)}`
 }
 // Пересчет цвета
 export const Colors = (arrayData) => {
@@ -19,9 +39,9 @@ export const Colors = (arrayData) => {
   const diametr_1 = d1 ** 2
   const diametr_2 = d2 ** 2
   if (n1) {
-    return (n1 * diametr_2) / diametr_1
+    return ((n1 * diametr_2) / diametr_1).toFixed(3)
   } else {
-    return (n2 * diametr_1) / diametr_2
+    return ((n2 * diametr_1) / diametr_2).toFixed(3)
   }
 }
 // Стрелка прогиба
