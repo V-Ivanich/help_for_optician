@@ -12,7 +12,6 @@ export const NavMenu = () => {
   const [toggleCard, setToggleCard] = useState({})
 
   const dispatch = useDispatch()
-
   const { StatusButtons, CardsList } = Formul
 
   const handleToggleCard = ({ target }) => {
@@ -43,7 +42,7 @@ export const NavMenu = () => {
 
   useEffect(() => {
     CardsList(toggleCard, parseCards())
-  }, [activeCards.length, dispatch])
+  }, [activeCards.length])
 
   function parseCards() {
     return activeCards.map((elem) => elem.name)

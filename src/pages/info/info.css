@@ -1,0 +1,41 @@
+.container-info {
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-bg__color);
+  color: var(--primary__color);
+}
+
+.info-title {
+  display: flex;
+  padding: 1.5rem;
+  gap: 10rem;
+  border-bottom: 1px solid #fff;
+}
+
+.menu-info {
+  margin-top: 1rem;
+  display: flex;
+  padding-right: 0.8rem;
+}
+
+.menu-container {
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
+  width: 280px;
+}
+
+.menu-container>a {
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+.menu-container>a:hover {
+  color: #fff;
+}
+
+.active {
+  color: #e79751;
+}
