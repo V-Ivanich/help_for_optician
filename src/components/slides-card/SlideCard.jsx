@@ -9,12 +9,7 @@ const SlideCard = () => {
   return (
     <div className='wrapper__slider'>
       {data.map((item, index) => (
-        <Card
-          key={index}
-          cardAttribute={item}
-          id={item.id}
-          // FormulItem={Formul[ArrayFormuls[index]]}
-        />
+        <Card key={index} cardElements={item} id={item.id} />
       ))}
     </div>
   )

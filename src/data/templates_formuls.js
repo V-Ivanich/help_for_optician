@@ -4,7 +4,7 @@ export const temlateCards = [
     name: 'faska',
     menuTitle: 'Фаска',
     title: 'Фаска с припуском',
-    checks: ' -Фаска под 45\u00b0',
+    checks: [' -Фаска под 45\u00b0', ' - С припуском'],
     inputs: [
       '\u00d8 детали (мм.)',
       'Максимальная фаска (мм.)',
@@ -43,7 +43,7 @@ export const temlateCards = [
     name: 'strelka',
     menuTitle: 'Стрелка прогиба',
     title: 'Стрелка прогиба',
-    checks: ' -Разница R1 и R2',
+    checks: [' -Разница R1 и R2'],
     inputs: ['\u00d8 сегмента (мм.)', 'R1 радиус (мм.)', 'R2 радиус (мм.)'],
   },
   {
@@ -51,7 +51,7 @@ export const temlateCards = [
     name: 'klin',
     menuTitle: 'Клин',
     title: 'Клин',
-    checks: ' -Из угловых в мм.',
+    checks: [' -Из угловых в мм.'],
     inputs: [
       'Градусы (\u00b0)',
       'Минуты (\u2032)',

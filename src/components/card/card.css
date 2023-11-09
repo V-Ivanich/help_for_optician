@@ -30,7 +30,9 @@
 }
 
 .card__checkbox {
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }

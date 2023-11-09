@@ -24,7 +24,9 @@ export const InfoPage = () => {
           <NavLink to='myhistorys'>История создания</NavLink>
           <NavLink to='myversions'>Версия программы</NavLink>
         </div>
-        <Outlet />
+        <div className='info-content'>
+          <Outlet />
+        </div>
       </div>
     </div>
   )

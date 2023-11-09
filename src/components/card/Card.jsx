@@ -2,8 +2,8 @@ import TextField from '../textField/TextField'
 import { Formul } from '../../utils'
 import './card.css'
 
-const Card = ({ cardAttribute, id, FormulItem }) => {
-  const placeholders = cardAttribute.inputs
+const Card = ({ cardElements, id }) => {
+  const placeholders = cardElements.inputs
 
   const { FiltersFormul } = Formul
 
@@ -31,7 +31,7 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
     })
 
     const outResult = document
-      .querySelector('.card__result_' + cardAttribute.name)
+      .querySelector('.card__result_' + cardElements.name)
       .querySelector('label')
     const tempResult = FiltersFormul(arrayDataCard, target.name)
     outResult.innerText = 'Result:\u00A0\u00A0\u00A0' + tempResult
@@ -47,20 +47,24 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
 
   return (
     <>
-      <div className='cardWrapper' name={cardAttribute.name}>
+      <div className='cardWrapper' name={cardElements.name}>
         <div className='card__title'>
-          <h4 className='card__text'>{cardAttribute.title}</h4>
+          <h4 className='card__text'>{cardElements.title}</h4>
         </div>
         <div className='card__body' id={'card_body_' + id}>
-          {cardAttribute.checks && (
+          {cardElements.checks && (
             <div className='card__checkbox'>
-              <input
-                type='checkbox'
-                id={'check_box_' + id}
-                name={'check_box_' + id}
-                onChange={handleChecked}
-              />
-              <label htmlFor={'check_box_' + id}>{cardAttribute.checks}</label>
+              {cardElements.checks.map((item, index) => (
+                <label htmlFor={'check_box_' + id} key={index}>
+                  <input
+                    type='checkbox'
+                    id={'check_box_' + id}
+                    name={'check_box_' + id}
+                    onChange={handleChecked}
+                  />
+                  {item}
+                </label>
+              ))}
             </div>
           )}
           {placeholders.map((item, index) => (
@@ -73,13 +77,13 @@ const Card = ({ cardAttribute, id, FormulItem }) => {
             />
           ))}
         </div>
-        <div className={'card__result_' + cardAttribute.name}>
+        <div className={'card__result_' + cardElements.name}>
           <label className='result'>Result : </label>
         </div>
         <div className='card__actions'>
           <button
             className='btn'
-            name={cardAttribute.name}
+            name={cardElements.name}
             onClick={handleSubmit}>
             Result
           </button>

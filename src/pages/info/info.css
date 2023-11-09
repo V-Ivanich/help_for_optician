@@ -17,14 +17,13 @@
 .menu-info {
   margin-top: 1rem;
   display: flex;
-  padding-right: 0.8rem;
 }
 
 .menu-container {
   display: flex;
   padding-left: 1rem;
   flex-direction: column;
-  width: 280px;
+  width: 20%;
 }
 
 .menu-container>a {
@@ -34,6 +33,10 @@
 
 .menu-container>a:hover {
   color: #fff;
+}
+
+.info-content {
+  width: 80%;
 }
 
 .active {

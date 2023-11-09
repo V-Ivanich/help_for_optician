@@ -3,13 +3,22 @@ import '../pages.css'
 export const Colors = () => {
   return (
     <div className='container-pages'>
-      <h2>Пересчет цвета</h2>
+      <h3>Пересчет цвета</h3>
       <p>
-        Цвет- это рабочий сленг. Это так называемые Кольца Ньютона. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Tempora incidunt culpa enim
-        rem temporibus ratione, iure neque hic, modi error tenetur eum.
-        Asperiores optio consequatur quisquam quia sed facilis alias!
+        `Цвет`- это рабочий сленг. Это так называемые Кольца Ньютона. По
+        количеству колец одного цвета, судят о точности изготовления оптической
+        поверхности. Обычно используют красный цвет для контроля количества
+        колец. В других странах контролируют по другим цветам. Если используются
+        интерферометры, для контроля точности поверхности, то `цвет` получается
+        монохромным. И тогда контроль осуществляется по темным полосам или
+        кольцам.
       </p>
+      <p>
+        По этой формуле пересчитывается как `общий цвет`, так и `местная ошибка`
+      </p>
+      <div className='block-photo'>
+        <img src='/src/img/test_1.png' alt='photo' style={{ width: '300px' }} />
+      </div>
     </div>
   )
 }

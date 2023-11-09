@@ -3,7 +3,7 @@ import '../pages.css'
 export const Triangles = () => {
   return (
     <div className='container-pages'>
-      <h2>Формулы треугольников</h2>
+      <h3>Формулы треугольников</h3>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora

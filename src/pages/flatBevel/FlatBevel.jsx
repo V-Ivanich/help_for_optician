@@ -3,13 +3,22 @@ import '../pages.css'
 export const FlatBevel = () => {
   return (
     <div className='container-pages'>
-      <h2>Расчет плоской фаски</h2>
+      <h3>Расчет плоской фаски</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-        incidunt culpa enim rem temporibus ratione, iure neque hic, modi error
-        tenetur eum. Asperiores optio consequatur quisquam quia sed facilis
-        alias!
+        Плоская фаска это конструктивная особенность конкретных деталей.
+        Наносятся на вогнутые линзы и зеркала.
       </p>
+      <p>
+        По чертежу задается общий размер светового диаметра. Но так как детали
+        имеют разные размеры, не всегда есть возможность проконтролировать общий
+        размер. И в данной формуле расчет идет на краевую зону. Т.е. мы
+        контролируем ширину самой плоской фаски. Обычно достаточно 4-х замеров,
+        в 4-х точках (типа буквой Х). Естественно что результаты не должны
+        отличатся от расчетных допусков.
+      </p>
+      <div className='block-photo'>
+        <img src='/src/img/test_2.png' alt='photo' style={{ width: '300px' }} />
+      </div>
     </div>
   )
 }

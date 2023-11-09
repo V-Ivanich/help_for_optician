@@ -8,13 +8,13 @@
 
 .move-left-1 {
   animation-name: left-1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .move-left-2-1 {
   animation-name: left-2-1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -26,13 +26,13 @@
 
 .move-left-3-1 {
   animation-name: left-3-1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .move-left-3-2 {
   animation-name: left-3-2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -44,7 +44,7 @@
 
 .delete-right-1of3 {
   animation-name: delete-1of3;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -56,7 +56,7 @@
 
 .delete-right-2of3 {
   animation-name: delete-2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -68,7 +68,7 @@
 
 .delete-right-3 {
   animation-name: delete-3;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -80,7 +80,7 @@
 
 .delete-right-1of2 {
   animation-name: delete-1of2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -92,7 +92,7 @@
 
 .delete-right-2of2 {
   animation-name: after-delete-2of2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 

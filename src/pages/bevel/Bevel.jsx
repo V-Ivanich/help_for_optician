@@ -3,7 +3,7 @@ import '../pages.css'
 export const Bevel = () => {
   return (
     <div className='container-pages'>
-      <h2>Расчет фаски</h2>
+      <h3>Расчет фаски</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
         incidunt culpa enim rem temporibus ratione, iure neque hic, modi error

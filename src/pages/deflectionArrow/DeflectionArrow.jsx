@@ -3,7 +3,7 @@ import '../pages.css'
 export const DeflectionArrow = () => {
   return (
     <div className='container-pages'>
-      <h2>Стрелка прогиба</h2>
+      <h3>Стрелка прогиба</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
         incidunt culpa enim rem temporibus ratione, iure neque hic, modi error
