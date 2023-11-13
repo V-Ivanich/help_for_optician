@@ -10,6 +10,7 @@
 - [JavaScript]
 - [React]
 - [Redux-Toolkit]
+- [ReactRouterDom-6]
 - [Vite]
 
 ## Использование
