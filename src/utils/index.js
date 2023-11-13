@@ -5,7 +5,7 @@ import { FlatBevel } from './formuls'
 // Пересчет цвета
 import { Colors } from './formuls'
 // Стрелка прогиба
-import { DeflectionArrow } from './formuls'
+import { DeflectionArrow } from './deflectionArrow'
 // Клин
 import { Wedge } from './formuls'
 // Мертввый цвет

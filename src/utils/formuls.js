@@ -1,6 +1,20 @@
 // Фаска с припуском на толщину
 export const Bevel = (arrayData) => {
-  const [flag, diametr, maxBevel, pripusk, radius] = [...arrayData]
+  const [flag_45, flag_pripusk, flag_ugol, diametr, maxBevel, pripusk, radius] =
+    [...arrayData]
+
+  console.log(maxBevel)
+  if (flag_45) {
+    const radius_cup = diametr * 0.7
+    if (!flag_pripusk) {
+      return 'R чашки = ' + radius_cup.toFixed(3)
+    } else {
+      const hypotenuse = Math.sqrt(Math.pow(pripusk, 2) * 2) + maxBevel
+      return `R чашки = ${radius_cup.toFixed(3)}\n
+        Фаска с припуском = ${hypotenuse.toFixed(3)}
+      `
+    }
+  }
 }
 // Плоская фаска
 export const FlatBevel = (arrayData) => {
@@ -31,7 +45,7 @@ export const FlatBevel = (arrayData) => {
     size = midleSeg - midleDet
     result = midleDet
   }
-  return `${result.toFixed(2)}\u00A0+${size.toFixed(3)}`
+  return `На сторону: ${result.toFixed(2)}\u00A0+${size.toFixed(3)}`
 }
 // Пересчет цвета
 export const Colors = (arrayData) => {
@@ -44,10 +58,7 @@ export const Colors = (arrayData) => {
     return ((n2 * diametr_1) / diametr_2).toFixed(3)
   }
 }
-// Стрелка прогиба
-export const DeflectionArrow = (arrayData) => {
-  const [flag, diametrSeg, radiusR1, radiusR2] = [...arrayData]
-}
+
 // Клин
 export const Wedge = (arrayData) => {
   const [flag] = [...arrayData]

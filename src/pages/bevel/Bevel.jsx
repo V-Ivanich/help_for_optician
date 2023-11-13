@@ -5,10 +5,12 @@ export const Bevel = () => {
     <div className='container-pages'>
       <h3>Расчет фаски</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-        incidunt culpa enim rem temporibus ratione, iure neque hic, modi error
-        tenetur eum. Asperiores optio consequatur quisquam quia sed facilis
-        alias!
+        Кто то называет ее технологической, что в принципе правда. В разных
+        случаях фаска может быть разной, как по ширине, так и по углу. С помошью
+        этой формулы можно расчитать и то, и другое. и даже заложить толщину на
+        обработку, и получить нужный результат. Т.е. можем заранее задать такой
+        размер, при котором, в процессе обработки получится заданная фаска с
+        нужным углом.
       </p>
     </div>
   )

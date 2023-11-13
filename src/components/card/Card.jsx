@@ -32,9 +32,9 @@ const Card = ({ cardElements, id }) => {
 
     const outResult = document
       .querySelector('.card__result_' + cardElements.name)
-      .querySelector('label')
+      .querySelector('.result')
     const tempResult = FiltersFormul(arrayDataCard, target.name)
-    outResult.innerText = 'Result:\u00A0\u00A0\u00A0' + tempResult
+    outResult.innerText = tempResult
   }
 
   const handleClearDataCard = (id) => {
@@ -77,21 +77,28 @@ const Card = ({ cardElements, id }) => {
             />
           ))}
         </div>
-        <div className={'card__result_' + cardElements.name}>
-          <label className='result'>Result : </label>
-        </div>
-        <div className='card__actions'>
-          <button
-            className='btn'
-            name={cardElements.name}
-            onClick={handleSubmit}>
-            Result
-          </button>
-          <button
-            className='btn btn-clear'
-            onClick={() => handleClearDataCard('card_body_' + id)}>
-            Reset
-          </button>
+        <div className='footer'>
+          <div className={'card__result_' + cardElements.name}>
+            <textarea
+              className='result'
+              placeholder='Результат:'
+              wrap='hard'
+              readOnly
+              rows='3'></textarea>
+          </div>
+          <div className='card__actions'>
+            <button
+              className='btn'
+              name={cardElements.name}
+              onClick={handleSubmit}>
+              Result
+            </button>
+            <button
+              className='btn btn-clear'
+              onClick={() => handleClearDataCard('card_body_' + id)}>
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </>
