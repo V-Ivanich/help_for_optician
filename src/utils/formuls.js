@@ -1,21 +1,3 @@
-// Фаска с припуском на толщину
-export const Bevel = (arrayData) => {
-  const [flag_45, flag_pripusk, flag_ugol, diametr, maxBevel, pripusk, radius] =
-    [...arrayData]
-
-  console.log(maxBevel)
-  if (flag_45) {
-    const radius_cup = diametr * 0.7
-    if (!flag_pripusk) {
-      return 'R чашки = ' + radius_cup.toFixed(3)
-    } else {
-      const hypotenuse = Math.sqrt(Math.pow(pripusk, 2) * 2) + maxBevel
-      return `R чашки = ${radius_cup.toFixed(3)}\n
-        Фаска с припуском = ${hypotenuse.toFixed(3)}
-      `
-    }
-  }
-}
 // Плоская фаска
 export const FlatBevel = (arrayData) => {
   const [

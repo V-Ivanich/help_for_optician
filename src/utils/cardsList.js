@@ -1,6 +1,6 @@
 export const CardsList = (dataItem, parsingActiveCards) => {
   const list = document.getElementsByClassName('cardWrapper')
-
+  console.log(dataItem, parsingActiveCards)
   const { id, activ, position } = dataItem
   const temporary = []
 
@@ -14,6 +14,7 @@ export const CardsList = (dataItem, parsingActiveCards) => {
 
   function findDeleteCard(id, arrayCard) {
     for (let item of arrayCard) {
+      console.log(item)
       if (item.attributes.name.nodeValue === id) return item
     }
   }

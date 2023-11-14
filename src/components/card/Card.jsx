@@ -34,7 +34,7 @@ const Card = ({ cardElements, id }) => {
       .querySelector('.card__result_' + cardElements.name)
       .querySelector('.result')
     const tempResult = FiltersFormul(arrayDataCard, target.name)
-    outResult.innerText = tempResult
+    outResult.innerHTML = tempResult
   }
 
   const handleClearDataCard = (id) => {

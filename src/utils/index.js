@@ -1,5 +1,5 @@
 // Фаска с припуском
-import { Bevel } from './formuls'
+import { Bevel } from './bevel'
 // Плоская фаска
 import { FlatBevel } from './formuls'
 // Пересчет цвета
