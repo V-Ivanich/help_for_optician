@@ -45,6 +45,7 @@ export const CardsList = (dataItem, parsingActiveCards) => {
   if (activ === 'false') {
     let temp = findDeleteCard(id, list)
 
+    console.log('temp', temp)
     switch (temporary.length) {
       // 3 - карточки
       case 2:
@@ -98,5 +99,6 @@ export const CardsList = (dataItem, parsingActiveCards) => {
         temp.classList.add('cardWrapper', 'delete-right-2of3')
         break
     }
+    temp = null
   }
 }
