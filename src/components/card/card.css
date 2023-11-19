@@ -41,7 +41,8 @@
 
 .result {
   width: 100%;
-  height: 80px;
+  height: 78px;
+  overflow: hidden;
   padding: 0.5rem;
   background-color: inherit;
   resize: none;

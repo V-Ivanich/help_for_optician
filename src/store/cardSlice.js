@@ -13,6 +13,9 @@ const cardSlice = createSlice({
     activeCard(state, action) {
       state.activeCard.push(action.payload)
     },
+    clearActiveCards(state) {
+      state.activeCard = []
+    },
     desactiveCard(state, action) {
       state.activeCard = state.activeCard.filter(
         (card) => card.name !== action.payload,
@@ -25,6 +28,7 @@ export const {
   addCard,
   activeCard,
   desactiveCard,
+  clearActiveCards,
   restoreClassAdd,
   restoreClassClear,
 } = cardSlice.actions

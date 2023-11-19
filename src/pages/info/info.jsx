@@ -1,8 +1,12 @@
 import { NavLink, Outlet, Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { clearActiveCards } from '../../store/cardSlice'
 
 import './info.css'
 
 export const InfoPage = () => {
+  const dispatch = useDispatch()
+  dispatch(clearActiveCards())
   return (
     <div className='container-info'>
       <div className='info-title'>
