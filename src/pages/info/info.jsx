@@ -13,16 +13,16 @@ export const InfoPage = () => {
       </div>
       <div className='menu-info'>
         <div className='menu-container'>
-          <NavLink to='bevel'>Фаска</NavLink>
-          <NavLink to='flatbevel'>Плоская фаска</NavLink>
-          <NavLink to='colors'>Цвет</NavLink>
-          <NavLink to='deflectionarrow'>Стрелка прогиба</NavLink>
-          <NavLink to='wedge'>Клин</NavLink>
-          <NavLink to='deadcolor'>Мертвый цвет</NavLink>
-          <NavLink to='triangles'>Треугольники</NavLink>
-          <NavLink to='rad_deg'>Радианы/Градусы</NavLink>
-          <NavLink to='myhistorys'>История создания</NavLink>
-          <NavLink to='myversions'>Версия программы</NavLink>
+          <NavLink to='page_bevel'>Фаска</NavLink>
+          <NavLink to='page_flatbevel'>Плоская фаска</NavLink>
+          <NavLink to='page_colors'>Цвет</NavLink>
+          <NavLink to='page_deflectionarrow'>Стрелка прогиба</NavLink>
+          <NavLink to='page_wedge'>Клин</NavLink>
+          <NavLink to='page_deadcolor'>Мертвый цвет</NavLink>
+          <NavLink to='page_triangles'>Треугольники</NavLink>
+          <NavLink to='page_rad_deg'>Радианы/Градусы</NavLink>
+          <NavLink to='page_myhistorys'>История создания</NavLink>
+          <NavLink to='page_myversions'>Версия программы</NavLink>
         </div>
         <div className='info-content'>
           <Outlet />

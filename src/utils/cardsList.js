@@ -1,6 +1,5 @@
 export const CardsList = (dataItem, parsingActiveCards) => {
   const list = document.getElementsByClassName('cardWrapper')
-  console.log(dataItem, parsingActiveCards)
   const { id, activ, position } = dataItem
   const temporary = []
 
@@ -14,7 +13,6 @@ export const CardsList = (dataItem, parsingActiveCards) => {
 
   function findDeleteCard(id, arrayCard) {
     for (let item of arrayCard) {
-      console.log(item)
       if (item.attributes.name.nodeValue === id) return item
     }
   }
@@ -45,7 +43,6 @@ export const CardsList = (dataItem, parsingActiveCards) => {
   if (activ === 'false') {
     let temp = findDeleteCard(id, list)
 
-    console.log('temp', temp)
     switch (temporary.length) {
       // 3 - карточки
       case 2:
@@ -68,7 +65,7 @@ export const CardsList = (dataItem, parsingActiveCards) => {
           temporary[1].classList.add('cardWrapper', 'after-removal-3of3')
         }
         if (position === 2) {
-          temp.removeAttr('class')
+          temp.removeAttribute('class')
           temporary[0].removeAttribute('class')
           temporary[1].removeAttribute('class')
 

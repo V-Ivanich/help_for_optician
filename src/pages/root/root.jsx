@@ -24,43 +24,43 @@ const router = createBrowserRouter([
     element: <InfoPage />,
     children: [
       {
-        path: 'bevel',
+        path: 'page_bevel',
         element: <Bevel />,
       },
       {
-        path: 'flatbevel',
+        path: 'page_flatbevel',
         element: <FlatBevel />,
       },
       {
-        path: 'colors',
+        path: 'page_colors',
         element: <Colors />,
       },
       {
-        path: 'deflectionarrow',
+        path: 'page_deflectionarrow',
         element: <DeflectionArrow />,
       },
       {
-        path: 'wedge',
+        path: 'page_wedge',
         element: <Wedge />,
       },
       {
-        path: 'deadcolor',
+        path: 'page_deadcolor',
         element: <DeadColor />,
       },
       {
-        path: 'triangles',
+        path: 'page_triangles',
         element: <Triangles />,
       },
       {
-        path: 'rad_deg',
+        path: 'page_rad_deg',
         element: <RadiansDegrees />,
       },
       {
-        path: 'myhistorys',
+        path: 'page_myhistorys',
         element: <MyHistorys />,
       },
       {
-        path: 'myversions',
+        path: 'page_myversions',
         element: <MyVersions />,
       },
     ],

@@ -1,19 +1,19 @@
 // Фаска с припуском
 import { Bevel } from './bevel'
 // Плоская фаска
-import { FlatBevel } from './formuls'
+import { FlatBevel } from './flatBevel'
 // Пересчет цвета
-import { Colors } from './formuls'
+import { Colors } from './colors'
 // Стрелка прогиба
 import { DeflectionArrow } from './deflectionArrow'
 // Клин
-import { Wedge } from './formuls'
+import { Wedge } from './wedge'
 // Мертввый цвет
-import { DeadColor } from './formuls'
+import { DeadColor } from './deadColor'
 // Формулы треугольников
-import { Triangles } from './formuls'
+import { Triangles } from './triangles'
 // Перевод радиан / градусы
-import { RadiansDegrees } from './formuls'
+import { RadiansDegrees } from './radiansDegrees'
 // Состояние кнопок меню
 import { StatusButtons } from './statusButtons'
 // Поиск в коллекции елемента соответствующий кнопке
