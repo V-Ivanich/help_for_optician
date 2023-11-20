@@ -1,4 +1,5 @@
 import TextField from '../textField/TextField'
+import PropTypes from 'prop-types'
 import { Formul } from '../../utils'
 import './card.css'
 
@@ -43,6 +44,10 @@ const Card = ({ cardElements, id }) => {
       if (item.type === 'checkbox') item.checked = false
       else item.value = ''
     })
+    const resultClear = document
+      .querySelector('.card__result_' + cardElements.name)
+      .querySelector('.result')
+    resultClear.innerHTML = ''
   }
 
   return (
@@ -106,3 +111,8 @@ const Card = ({ cardElements, id }) => {
 }
 
 export default Card
+
+Card.propTypes = {
+  cardElements: PropTypes.object,
+  id: PropTypes.number,
+}
