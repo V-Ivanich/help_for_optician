@@ -8,14 +8,14 @@ const Card = ({ cardElements, id }) => {
 
   const { FiltersFormul } = Formul
 
-  const handleChangeCard = (e) => {
-    const { value, name } = e.target
-    // console.log(value, name)
-  }
+  // const handleChangeCard = (e) => {
+  //   const { value, name } = e.target
+  //   console.log(value, name)
+  // }
 
-  const handleChecked = (e) => {
-    const { checked, name } = e.target
-  }
+  // const handleChecked = (e) => {
+  //   const { checked, name } = e.target
+  // }
 
   const handleSubmit = ({ target }) => {
     const idsSingle = '#card_body_' + String(id)
@@ -65,7 +65,7 @@ const Card = ({ cardElements, id }) => {
                     type='checkbox'
                     id={'check_box_' + id}
                     name={'check_box_' + id}
-                    onChange={handleChecked}
+                    // onChange={handleChecked}
                   />
                   {item}
                 </label>
@@ -78,7 +78,7 @@ const Card = ({ cardElements, id }) => {
               placeholder={item}
               type='number'
               name={'textField_' + id + index}
-              onChange={handleChangeCard}
+              // onChange={handleChangeCard}
             />
           ))}
         </div>
@@ -114,5 +114,5 @@ export default Card
 
 Card.propTypes = {
   cardElements: PropTypes.object,
-  id: PropTypes.number,
+  id: PropTypes.string,
 }
