@@ -11,7 +11,11 @@
   border: 1px solid var(--border-card);
   border-radius: 10px;
   box-shadow: var(--shadow-card) 3px 4px 10px;
-  background-image: linear-gradient(to top, var(--primary-bg__color), var(--bg-dark));
+  background-image: linear-gradient(
+    to top,
+    var(--primary-bg__color),
+    var(--bg-dark)
+  );
   font-family: 'Roboto', sans-serif;
   color: var(--primary__color);
   flex-shrink: 0;
@@ -70,7 +74,7 @@
 }
 
 .btn-clear {
-  color: #fbdd9a;
+  color: #fbf19a;
 }
 
 .btn:hover {
@@ -79,4 +83,10 @@
 
 .btn:active {
   background-image: linear-gradient(to top, #4b6e80, #76c8f8);
+}
+
+.btn:disabled {
+  cursor: auto;
+  background-image: linear-gradient(to top, #7893a07a, #bed7e279);
+  color: burlywood;
 }
