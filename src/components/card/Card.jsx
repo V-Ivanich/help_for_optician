@@ -1,54 +1,16 @@
 import TextField from '../textField/TextField'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
-// import { Formul } from '../../utils'
+import { SelectorEvents } from '../../utils/selectorEvents'
 import './card.css'
-import HandleFaska from '../../utils/handlers/handleFaska'
-import HandlePlFaska from '../../utils/handlers/handlePlFaska'
 
 const Card = ({ cardElements, id }) => {
+  const [valueDisable, setDisabled] = useState(true)
   const placeholders = cardElements.inputs
 
-  // const { FiltersFormul } = Formul
-
-  const handleSubmit = ({ target, currentTarget }) => {
-    switch (currentTarget.id) {
-      case 'wrapper-faska':
-        HandleFaska(target, currentTarget)
-        break
-      case 'wrapper-pl_faska':
-        HandlePlFaska(target, currentTarget)
-        break
-      case 'wrapper-cvet':
-        break
-      case 'wrapper-strelka':
-        break
-      case 'wrapper-klin':
-        break
-      case 'wrapper-dead_cvet':
-        break
-      case 'wrapper-treygolnik':
-        break
-      case 'wrapper-grad_rad':
-        break
-    }
-    // const idsSingle = '#card_body_' + String(id)
-    // const nodeLists = document
-    //   .querySelector(idsSingle)
-    //   .querySelectorAll('input')
-    // const arrayDataCard = []
-    // nodeLists.forEach((item) => {
-    //   if (item.type === 'checkbox') {
-    //     arrayDataCard.push(item.checked)
-    //   } else {
-    //     arrayDataCard.push(+item.value)
-    //   }
-    // })
-
-    // const outResult = document
-    //   .querySelector('.card__result_' + cardElements.name)
-    //   .querySelector('.result')
-    // const tempResult = FiltersFormul(arrayDataCard, target.name)
-    // outResult.innerHTML = tempResult
+  const handleChanges = ({ target, currentTarget }) => {
+    console.log(target, 'card', currentTarget)
+    SelectorEvents(target, currentTarget, setDisabled)
   }
 
   const handleClearDataCard = (id) => {
@@ -69,7 +31,8 @@ const Card = ({ cardElements, id }) => {
         className='cardWrapper'
         name={cardElements.name}
         id={'wrapper-' + cardElements.name}
-        onClick={handleSubmit}>
+        onChange={handleChanges}
+        onClick={handleChanges}>
         <div className='card__title'>
           <h4 className='card__text'>{cardElements.title}</h4>
         </div>
@@ -112,12 +75,16 @@ const Card = ({ cardElements, id }) => {
               rows='3'></textarea>
           </div>
           <div className='card__actions' id={'actions-' + cardElements.name}>
-            <button className='btn' name={cardElements.name} disabled>
+            <button
+              className='btn'
+              // onClick={handleChanges}
+              name={cardElements.name}
+              disabled={valueDisable}>
               Result
             </button>
             <button
               className='btn btn-clear'
-              onClick={() => handleClearDataCard('card_body_' + id)}>
+              onClick={() => handleClearDataCard('body-' + cardElements.name)}>
               Reset
             </button>
           </div>
