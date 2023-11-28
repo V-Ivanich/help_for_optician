@@ -4,8 +4,8 @@ export const Colors = (arrayData) => {
   const diametr_1 = d1 ** 2
   const diametr_2 = d2 ** 2
   if (n1) {
-    return ((n1 * diametr_2) / diametr_1).toFixed(3)
+    return 'Результат : ' + ((n1 * diametr_2) / diametr_1).toFixed(3)
   } else {
-    return ((n2 * diametr_1) / diametr_2).toFixed(3)
+    return 'Результат : ' + ((n2 * diametr_1) / diametr_2).toFixed(3)
   }
 }

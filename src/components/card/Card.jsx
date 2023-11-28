@@ -9,7 +9,6 @@ const Card = ({ cardElements, id }) => {
   const placeholders = cardElements.inputs
 
   const handleChanges = ({ target, currentTarget }) => {
-    console.log(target, 'card', currentTarget)
     SelectorEvents(target, currentTarget, setDisabled)
   }
 

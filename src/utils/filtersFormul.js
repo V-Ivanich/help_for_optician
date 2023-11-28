@@ -1,4 +1,4 @@
-import { Formul } from '.'
+import { Formul } from './index'
 
 const FiltersFormul = (arrayData, id) => {
   let resul = null

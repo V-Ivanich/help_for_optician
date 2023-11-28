@@ -1,6 +1,6 @@
 import { OutResult } from '../outResult'
 
-const HandlePlFaska = (target, parentBlock, setDisabled) => {
+const HandleStrelka = (target, parentBlock, setDisabled) => {
   const nodeList = parentBlock.querySelectorAll('input')
 
   if (target.tagName === 'BUTTON') {
@@ -16,4 +16,4 @@ const HandlePlFaska = (target, parentBlock, setDisabled) => {
   setDisabled(false)
 }
 
-export default HandlePlFaska
+export default HandleStrelka
