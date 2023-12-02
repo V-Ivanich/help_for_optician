@@ -5,10 +5,14 @@ export const Wedge = () => {
     <div className='container-pages'>
       <h3>Клин</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-        incidunt culpa enim rem temporibus ratione, iure neque hic, modi error
-        tenetur eum. Asperiores optio consequatur quisquam quia sed facilis
-        alias!
+        Клин,- разнотолжинность, косина. Измеряется в разных величинах. Для
+        этого и сделанна данная формула, чтобы переводить в соответствующие
+        величины, угловые или метрические. Для простоты,- это разница между
+        толстым краем детали и его противоположным, тонким краем. Иногда клин
+        делают намеренно, а иногда нужно от него избавляться в заданных
+        пределах. В данном случае общет ведется по формулам треугольников,
+        которые есть в отдельной карточке. Возможно удобней будет эта
+        карточка...
       </p>
     </div>
   )

@@ -15,6 +15,18 @@ const HandleColors = (target, parentBlock, setDisabled) => {
   } else {
     setDisabled(true)
   }
+
+  if (nodeList[2].value) {
+    nodeList[3].disabled = true
+  } else nodeList[3].disabled = false
+
+  if (nodeList[3].value) {
+    nodeList[2].disabled = true
+  } else nodeList[2].disabled = false
+
+  if (!nodeList[2].value && !nodeList[3].value) {
+    nodeList[3].disabled = false
+  }
 }
 
 export default HandleColors
