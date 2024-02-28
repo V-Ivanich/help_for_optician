@@ -28,8 +28,7 @@ const Card = ({ cardElements, id }) => {
     <>
       <div
         className='cardWrapper'
-        name={cardElements.name}
-        id={'wrapper-' + cardElements.name}
+        id={cardElements.id}
         onChange={handleChanges}
         onClick={handleChanges}>
         <div className='card__title'>

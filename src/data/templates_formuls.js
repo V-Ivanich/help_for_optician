@@ -1,8 +1,9 @@
 export const temlateCards = [
   {
-    id: '0',
-    name: 'faska',
+    id: 'idFaska',
+    name: 'idFaska',
     menuTitle: 'Фаска',
+    value: 'false',
     title: 'Фаска с припуском',
     checks: [' - Фаска под 45\u00b0', ' - С припуском', ' - Узнать угол'],
     inputs: [
@@ -13,9 +14,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '1',
-    name: 'pl_faska',
+    id: 'idPlFaska',
+    name: 'idPlFaska',
     menuTitle: 'Плоская фаска',
+    value: 'false',
     title: 'Плоская фаска',
     inputs: [
       '\u00d8 детали (мм.)',
@@ -27,9 +29,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '2',
-    name: 'cvet',
+    id: 'idCvet',
+    name: 'idCvet',
     menuTitle: 'Цвет',
+    value: 'false',
     title: 'Пересчет цвета',
     inputs: [
       '\u00d8 детали (мм.)',
@@ -39,9 +42,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '3',
-    name: 'strelka',
+    id: 'idStrelka',
+    name: 'idStrelka',
     menuTitle: 'Стрелка прогиба',
+    value: 'false',
     title: 'Стрелка прогиба',
     checks: [' -Разница R1 и R2', ' -отрицательные RR'],
     inputs: [
@@ -51,9 +55,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '4',
-    name: 'klin',
+    id: 'idKlin',
+    name: 'idKlin',
     menuTitle: 'Клин',
+    value: 'false',
     title: 'Клин',
     checks: [' -Из угловых в мм.'],
     inputs: [
@@ -66,9 +71,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '5',
-    name: 'dead_cvet',
+    id: 'idDeadCvet',
+    name: 'idDeadCvet',
     menuTitle: 'Мертвый цвет',
+    value: 'false',
     title: 'Мертвый цвет',
     inputs: [
       'Угол (\u00b0)',
@@ -78,9 +84,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '6',
-    name: 'treygolnik',
+    id: 'idTreygolnik',
+    name: 'idTreygolnik',
     menuTitle: 'Треугольники',
+    value: 'false',
     title: 'Формулы треугольников',
     inputs: [
       'Сторона A',
@@ -93,9 +100,10 @@ export const temlateCards = [
     ],
   },
   {
-    id: '7',
-    name: 'grad_rad',
+    id: 'idGradRad',
+    name: 'idGradRad',
     menuTitle: 'Радианы/градусы',
+    value: 'false',
     title: 'Радианы/градусы',
     inputs: [
       'Градусы (\u00b0)',

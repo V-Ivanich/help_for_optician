@@ -1,63 +1,173 @@
 import { useSelector, useDispatch } from 'react-redux'
+import { temlateCards } from '../../data/templates_formuls'
+import { gsap } from 'gsap'
 import { activeCard, desactiveCard } from '../../store/cardSlice'
 
 import { Formul } from '../../utils'
 import './nav-menu.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export const NavMenu = () => {
-  const arrayCards = useSelector((state) => state.cards.card)
   const activeCards = useSelector((state) => state.cards.activeCard)
+  const [removeCard, setRemoveCard] = useState('')
 
-  const [toggleCard, setToggleCard] = useState({})
+  const refBtn_1 = useRef()
+  const refBtn_2 = useRef()
+  const refBtn_3 = useRef()
+  const refBtn_4 = useRef()
+  const refBtn_5 = useRef()
+  const refBtn_6 = useRef()
+  const refBtn_7 = useRef()
+  const refBtn_8 = useRef()
+
+  const arrayRefsBtns = [
+    refBtn_1,
+    refBtn_2,
+    refBtn_3,
+    refBtn_4,
+    refBtn_5,
+    refBtn_6,
+    refBtn_7,
+    refBtn_8,
+  ]
 
   const dispatch = useDispatch()
-  const { StatusButtons, CardsList } = Formul
+  const { StatusButtons } = Formul
 
-  const handleToggleCard = ({ target }) => {
-    const dataItem = StatusButtons(target)
+  const handleToggleCard = (ref) => {
+    if (ref.current.value === 'false') {
+      dispatch(activeCard(ref.current.name))
+      setRemoveCard('')
+      StatusButtons(ref.current)
+    } else {
+      setRemoveCard(ref.current.name)
+      dispatch(desactiveCard(ref.current.name))
+      StatusButtons(ref.current)
+    }
+  }
 
-    let position = 0
-    if (activeCards.length) {
-      activeCards.forEach((elem, index) => {
-        if (elem.name === dataItem.id) {
-          position = index
+  function refsActive() {
+    const activeRefs = arrayRefsBtns.filter(
+      (item) => item.current.value === 'true',
+    )
+    if (activeRefs.length === 3) {
+      arrayRefsBtns.forEach((itemRef) => {
+        if (itemRef.current.value === 'false') {
+          itemRef.current.disabled = true
+        }
+      })
+    } else {
+      arrayRefsBtns.forEach((itemRef) => {
+        if (itemRef.current.value === 'false') {
+          itemRef.current.disabled = false
         }
       })
     }
-    if (dataItem) {
-      if (dataItem.activ === 'true') {
-        const findCard = arrayCards.find((card) => card.name === dataItem.id)
-        dispatch(activeCard(findCard))
-      } else {
-        dispatch(desactiveCard(dataItem.id))
+  }
+
+  function listCards() {
+    if ((removeCard === '') & (activeCards.length !== 0)) {
+      switch (activeCards.length) {
+        case 1:
+          gsap.to(`#${activeCards[0]}`, {
+            duration: 1,
+            x: -668,
+            opacity: 1,
+          })
+          break
+        case 2:
+          gsap.to(`#${activeCards[0]}`, {
+            duration: 1,
+            x: -813,
+            opacity: 1,
+          })
+          gsap.to(`#${activeCards[1]}`, {
+            duration: 1,
+            x: -523,
+            opacity: 1,
+          })
+          break
+        case 3:
+          gsap.to(`#${activeCards[0]}`, {
+            x: -958,
+            duration: 1,
+            opacity: 1,
+          })
+          gsap.to(`#${activeCards[1]}`, {
+            x: -668,
+            duration: 1,
+            opacity: 1,
+          })
+          gsap.to(`#${activeCards[2]}`, {
+            x: -378,
+            duration: 1,
+            opacity: 1,
+          })
+          break
       }
     }
-    setToggleCard({
-      id: dataItem.id,
-      activ: dataItem.activ,
-      position: position,
-    })
+    if (removeCard !== '') {
+      switch (activeCards.length) {
+        case 2:
+          gsap.to(`#${removeCard}`, {
+            duration: 1,
+            opacity: 0.2,
+            x: 0,
+          })
+          gsap.to(`#${activeCards[0]}`, {
+            duration: 1,
+            x: -813,
+            opacity: 1,
+          })
+          gsap.to(`#${activeCards[1]}`, {
+            duration: 1,
+            x: -523,
+            opacity: 1,
+          })
+          break
+        case 1:
+          gsap.to(`#${removeCard}`, {
+            duration: 1,
+            opacity: 0.2,
+            x: 0,
+          })
+          gsap.to(`#${activeCards[0]}`, {
+            duration: 1,
+            x: -668,
+            opacity: 1,
+          })
+          break
+        case 0:
+          gsap.to(`#${removeCard}`, {
+            duration: 1,
+            opacity: 0.2,
+            x: 0,
+          })
+          break
+      }
+    }
   }
 
   useEffect(() => {
-    CardsList(toggleCard, parseCards())
+    refsActive()
   }, [activeCards.length])
 
-  function parseCards() {
-    return activeCards.map((elem) => elem.name)
-  }
+  useEffect(() => {
+    listCards()
+  }, [removeCard, activeCards.length])
 
   return (
     <div className='container-menu'>
       <div className='nav-menu'>
-        {arrayCards.map((card, index) => (
+        {temlateCards.map((card, index) => (
           <button
+            ref={arrayRefsBtns[index]}
             className='links-formul'
+            name={card.name}
             key={index}
-            id={card.name}
-            value='false'
-            onClick={handleToggleCard}>
+            id={card.name + index}
+            value={card.value}
+            onClick={() => handleToggleCard(arrayRefsBtns[index])}>
             {card.menuTitle}
           </button>
         ))}

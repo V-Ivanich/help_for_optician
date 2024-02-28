@@ -1,14 +1,12 @@
 import Card from '../card/Card'
-import { useSelector } from 'react-redux'
+import { temlateCards } from '../../data/templates_formuls'
 
 import './sliders-card.css'
 
 const SlideCard = () => {
-  const data = useSelector((state) => state.cards.card)
-
   return (
     <div className='wrapper__slider'>
-      {data.map((item, index) => (
+      {temlateCards.map((item, index) => (
         <Card key={index} cardElements={item} id={item.id} />
       ))}
     </div>
