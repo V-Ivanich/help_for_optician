@@ -5,6 +5,7 @@ import Images from '../../img/man.svg'
 import './header.css'
 
 const Header = () => {
+  const flagRender = true
   return (
     <div>
       <div className='line-header'>
@@ -28,7 +29,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <NavMenu />
+      <NavMenu flagRender={flagRender} />
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { temlateCards } from '../../data/templates_formuls'
 import { gsap } from 'gsap'
 import { activeCard, desactiveCard } from '../../store/cardSlice'
 
@@ -9,6 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export const NavMenu = () => {
   const activeCards = useSelector((state) => state.cards.activeCard)
+  const temlateCards = useSelector((state) => state.cards.cards)
   const [removeCard, setRemoveCard] = useState('')
 
   const refBtn_1 = useRef()
