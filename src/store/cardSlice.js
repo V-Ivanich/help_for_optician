@@ -10,6 +10,17 @@ const cardSlice = createSlice({
     addCard(state, { payload }) {
       state.cards.push(payload)
     },
+    toggleValueButton(state, { payload }) {
+      const templeValue = state.cards.map((item) =>
+        item.id === payload
+          ? {
+              ...item,
+              value: String(!JSON.parse(item.value)),
+            }
+          : item,
+      )
+      state.cards = templeValue
+    },
 
     activeCard(state, { payload }) {
       state.activeCard.push(payload)
@@ -21,5 +32,6 @@ const cardSlice = createSlice({
   },
 })
 
-export const { activeCard, desactiveCard, addCard } = cardSlice.actions
+export const { activeCard, desactiveCard, addCard, toggleValueButton } =
+  cardSlice.actions
 export default cardSlice.reducer

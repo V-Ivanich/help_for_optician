@@ -1,8 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { gsap } from 'gsap'
-import { activeCard, desactiveCard } from '../../store/cardSlice'
+import {
+  activeCard,
+  desactiveCard,
+  toggleValueButton,
+} from '../../store/cardSlice'
 
-import { Formul } from '../../utils'
 import './nav-menu.css'
 import { useEffect, useState, useRef } from 'react'
 
@@ -32,17 +35,15 @@ export const NavMenu = () => {
   ]
 
   const dispatch = useDispatch()
-  const { StatusButtons } = Formul
 
   const handleToggleCard = (ref) => {
+    dispatch(toggleValueButton(ref.current.name))
     if (ref.current.value === 'false') {
       dispatch(activeCard(ref.current.name))
       setRemoveCard('')
-      StatusButtons(ref.current)
     } else {
       setRemoveCard(ref.current.name)
       dispatch(desactiveCard(ref.current.name))
-      StatusButtons(ref.current)
     }
   }
 
@@ -162,7 +163,11 @@ export const NavMenu = () => {
         {temlateCards.map((card, index) => (
           <button
             ref={arrayRefsBtns[index]}
-            className='links-formul'
+            className={
+              card.value === 'false'
+                ? 'links-formul'
+                : 'links-formul push-button'
+            }
             name={card.name}
             key={index}
             id={card.name + index}
