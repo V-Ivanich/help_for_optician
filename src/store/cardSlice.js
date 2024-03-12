@@ -3,9 +3,14 @@ import { createSlice } from '@reduxjs/toolkit'
 const cardSlice = createSlice({
   name: 'card',
   initialState: {
+    cards: [],
     activeCard: [],
   },
   reducers: {
+    addCard(state, { payload }) {
+      state.cards.push(payload)
+    },
+
     activeCard(state, { payload }) {
       state.activeCard.push(payload)
     },
@@ -16,5 +21,5 @@ const cardSlice = createSlice({
   },
 })
 
-export const { activeCard, desactiveCard } = cardSlice.actions
+export const { activeCard, desactiveCard, addCard } = cardSlice.actions
 export default cardSlice.reducer
