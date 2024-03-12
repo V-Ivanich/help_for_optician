@@ -5,7 +5,7 @@ import { activeCard, desactiveCard } from '../../store/cardSlice'
 
 import { Formul } from '../../utils'
 import './nav-menu.css'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export const NavMenu = () => {
   const activeCards = useSelector((state) => state.cards.activeCard)
