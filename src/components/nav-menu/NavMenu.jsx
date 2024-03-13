@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { useWindowSize } from '../../utils/hooks/UseWindowSize'
+// import { useWindowSize } from '../../utils/hooks/UseWindowSize'
 import { gsap } from 'gsap'
 import {
   activeCard,
@@ -11,8 +11,6 @@ import './nav-menu.css'
 import { useEffect, useState, useRef } from 'react'
 
 export const NavMenu = () => {
-  const { width } = useWindowSize()
-  console.log(width)
   const activeCards = useSelector((state) => state.cards.activeCard)
   const temlateCards = useSelector((state) => state.cards.cards)
   const [removeCard, setRemoveCard] = useState('')
@@ -25,6 +23,7 @@ export const NavMenu = () => {
   const refBtn_6 = useRef()
   const refBtn_7 = useRef()
   const refBtn_8 = useRef()
+  const refDivContainer = useRef()
 
   const arrayRefsBtns = [
     refBtn_1,
@@ -70,40 +69,42 @@ export const NavMenu = () => {
   }
 
   function listCards() {
+    const { width } = refDivContainer.current.getBoundingClientRect()
+    console.log(width)
     if ((removeCard === '') & (activeCards.length !== 0)) {
       switch (activeCards.length) {
         case 1:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -668,
+            x: -(1030 - (width / 2 - 140 - (1030 - width))),
             opacity: 1,
           })
           break
         case 2:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -813,
+            x: -(1030 - (width / 2 - 285)),
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
             duration: 1,
-            x: -523,
+            x: -(1030 - width / 2 - 5),
             opacity: 1,
           })
           break
         case 3:
           gsap.to(`#${activeCards[0]}`, {
-            x: -958,
+            x: -(1030 - (width / 2 - 280 - 150 - (1030 - width))),
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
-            x: -668,
+            x: -(1030 - (width / 2 - 140 - (1030 - width))),
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[2]}`, {
-            x: -378,
+            x: -(1030 - (width / 2 + 150 - (1030 - width))),
             duration: 1,
             opacity: 1,
           })
@@ -161,7 +162,7 @@ export const NavMenu = () => {
   }, [removeCard, activeCards.length])
 
   return (
-    <div className='container-menu'>
+    <div className='container-menu' ref={refDivContainer}>
       <div className='nav-menu'>
         {temlateCards.map((card, index) => (
           <button
