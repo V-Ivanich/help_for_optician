@@ -75,7 +75,7 @@ const Card = ({ cardElements, id }) => {
           <div className='card__actions' id={'actions-' + cardElements.name}>
             <button
               className='btn'
-              // onClick={handleChanges}
+              onClick={handleChanges}
               name={cardElements.name}
               disabled={valueDisable}>
               Result

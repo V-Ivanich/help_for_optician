@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
+import { useWindowSize } from '../../utils/hooks/UseWindowSize'
 import { gsap } from 'gsap'
 import {
   activeCard,
@@ -10,6 +11,8 @@ import './nav-menu.css'
 import { useEffect, useState, useRef } from 'react'
 
 export const NavMenu = () => {
+  const { width } = useWindowSize()
+  console.log(width)
   const activeCards = useSelector((state) => state.cards.activeCard)
   const temlateCards = useSelector((state) => state.cards.cards)
   const [removeCard, setRemoveCard] = useState('')
