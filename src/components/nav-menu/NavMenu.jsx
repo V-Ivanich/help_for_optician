@@ -76,14 +76,14 @@ export const NavMenu = () => {
         case 1:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: width / 2 - 140 + 285,
+            x: width / 2 - 140 + 290,
             opacity: 1,
           })
           break
         case 2:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: width / 2 + 5 + 285,
+            x: width / 2 + 290,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
@@ -94,17 +94,17 @@ export const NavMenu = () => {
           break
         case 3:
           gsap.to(`#${activeCards[0]}`, {
-            x: width / 2 + 285 + 150,
+            x: width / 2 + 290 + 150,
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
-            x: width / 2 - 140 + 285,
+            x: width / 2 - 140 + 290,
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[2]}`, {
-            x: width / 2 - 145,
+            x: width / 2 - 140,
             duration: 1,
             opacity: 1,
           })
@@ -117,11 +117,11 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: -285,
+            x: -300,
           })
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: width / 2 + 5 + 285,
+            x: width / 2 + 5 + 290,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
@@ -134,11 +134,11 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: -285,
+            x: -300,
           })
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: width / 2 - 140 + 285,
+            x: width / 2 - 140 + 290,
             opacity: 1,
           })
           break
@@ -146,7 +146,7 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: -285,
+            x: -300,
           })
           break
       }
