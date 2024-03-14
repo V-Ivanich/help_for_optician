@@ -76,35 +76,35 @@ export const NavMenu = () => {
         case 1:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -(1030 - (width / 2 - 140 - (1030 - width))),
+            x: width / 2 - 140 + 285,
             opacity: 1,
           })
           break
         case 2:
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -(1030 - (width / 2 - 285)),
+            x: width / 2 + 5 + 285,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
             duration: 1,
-            x: -(1030 - width / 2 - 5),
+            x: width / 2,
             opacity: 1,
           })
           break
         case 3:
           gsap.to(`#${activeCards[0]}`, {
-            x: -(1030 - (width / 2 - 280 - 150 - (1030 - width))),
+            x: width / 2 + 285 + 150,
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
-            x: -(1030 - (width / 2 - 140 - (1030 - width))),
+            x: width / 2 - 140 + 285,
             duration: 1,
             opacity: 1,
           })
           gsap.to(`#${activeCards[2]}`, {
-            x: -(1030 - (width / 2 + 150 - (1030 - width))),
+            x: width / 2 - 145,
             duration: 1,
             opacity: 1,
           })
@@ -117,16 +117,16 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: 0,
+            x: -285,
           })
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -813,
+            x: width / 2 + 5 + 285,
             opacity: 1,
           })
           gsap.to(`#${activeCards[1]}`, {
             duration: 1,
-            x: -523,
+            x: width / 2,
             opacity: 1,
           })
           break
@@ -134,11 +134,11 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: 0,
+            x: -285,
           })
           gsap.to(`#${activeCards[0]}`, {
             duration: 1,
-            x: -668,
+            x: width / 2 - 140 + 285,
             opacity: 1,
           })
           break
@@ -146,7 +146,7 @@ export const NavMenu = () => {
           gsap.to(`#${removeCard}`, {
             duration: 1,
             opacity: 0.2,
-            x: 0,
+            x: -285,
           })
           break
       }
