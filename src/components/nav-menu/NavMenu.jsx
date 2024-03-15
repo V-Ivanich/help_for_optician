@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-// import { useWindowSize } from '../../utils/hooks/UseWindowSize'
+import { useWindowSize } from '../../utils/hooks/UseWindowSize'
 import { gsap } from 'gsap'
 import {
   activeCard,
@@ -11,6 +11,7 @@ import './nav-menu.css'
 import { useEffect, useState, useRef } from 'react'
 
 export const NavMenu = () => {
+  const { width } = useWindowSize()
   const activeCards = useSelector((state) => state.cards.activeCard)
   const temlateCards = useSelector((state) => state.cards.cards)
   const [removeCard, setRemoveCard] = useState('')
@@ -53,7 +54,14 @@ export const NavMenu = () => {
     const activeRefs = arrayRefsBtns.filter(
       (item) => item.current.value === 'true',
     )
-    if (activeRefs.length === 3) {
+    if (activeRefs.length === 3 && width > 768) {
+      arrayRefsBtns.forEach((itemRef) => {
+        if (itemRef.current.value === 'false') {
+          itemRef.current.disabled = true
+        }
+      })
+    }
+    if (activeRefs.length === 2 && width > 600 && width <= 768) {
       arrayRefsBtns.forEach((itemRef) => {
         if (itemRef.current.value === 'false') {
           itemRef.current.disabled = true
