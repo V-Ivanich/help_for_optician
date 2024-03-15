@@ -64,3 +64,13 @@
 .push-button {
   color: var(--color-white);
 }
+
+@media (max-width: 765px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: var(--primary__color);
+  }
+}

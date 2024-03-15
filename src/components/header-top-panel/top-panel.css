@@ -17,3 +17,9 @@
   font-size: 1rem;
   color: #e0e0e0;
 }
+
+@media (max-width: 765px) {
+  .header-top-panel {
+    display: none;
+  }
+}
